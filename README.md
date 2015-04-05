@@ -25,3 +25,12 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 ## Wishlist
 
 - Read the list of speakers (and their profile pic) and agenda from JSON file
+
+## Continous Deployment to Azure WebApp
+
+- When setting up the GitHub URL, please make sure you are using the Forked version
+- After the deployment has succeeded, you will get HTTP 404 or HTTP 403 error
+- To fix that, in the WebApp > Configure tab, make sure that the virtual path settings look like
+  /              site\wwwroot\2015\src
+- Once changed, save the settings and refresh the website
+
