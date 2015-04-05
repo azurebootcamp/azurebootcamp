@@ -21,6 +21,8 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Clone on desktop
 - Upload to [Stackhive](http://www.stackhive.com) 
 - Start editing html/js/css files
+- Google Map: To change location of your map, you can follow steps provided here [Embed Maps](https://developers.google.com/maps/documentation/embed/guide)
+
 
 ## Wishlist
 
