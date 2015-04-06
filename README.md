@@ -2,7 +2,7 @@
 
 This is the GitHub repository for Azure Bootcamp - Singapore Chapter. 
 The live version of 2015 bootcamp website (hosted as Azure Website) is available at 
-- Main website: **[Singapore Azure Bootcamp](http://singapore.azurebootcamp.com)**
+- Main website: **[Singapore Azure Bootcamp](http://singapore.azurebootcamp.net)**
 - Routed website: **[Singapore Azure Bootcamp](http://globalazurebootcampsg.azurewebsites.net)**
 
 Feel free to **fork** it and use it, but do remember to update the Speaker and Sponsors photographs
@@ -37,6 +37,7 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 
 ## Other regions who have adopted this design
 
+- Singapore: [http://singapore.azurebootcamp.net](http://singapore.azurebootcamp.net)
 - Sri Lanka: [http://colombo-bootcamp.azurewebsites.net](http://colombo-bootcamp.azurewebsites.net)
 - Bhubhaneswar, India: [http://bhubaneswar.azurebootcamp.net/](http://bhubaneswar.azurebootcamp.net/)
 - Mexico: [http://bootcamp.azurewebsites.net/](http://bootcamp.azurewebsites.net/)
