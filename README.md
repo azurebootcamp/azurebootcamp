@@ -41,3 +41,4 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Sri Lanka: [http://colombo-bootcamp.azurewebsites.net](http://colombo-bootcamp.azurewebsites.net)
 - Bhubhaneswar, India: [http://bhubaneswar.azurebootcamp.net/](http://bhubaneswar.azurebootcamp.net/)
 - Mexico: [http://bootcamp.azurewebsites.net/](http://bootcamp.azurewebsites.net/)
+- Melbourne: [http://melbourne.azurebootcamp.net/](http://melbourne.azurebootcamp.net/)
