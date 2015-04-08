@@ -42,3 +42,4 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Bhubhaneswar, India: [http://bhubaneswar.azurebootcamp.net/](http://bhubaneswar.azurebootcamp.net/)
 - Mexico: [http://bootcamp.azurewebsites.net/](http://bootcamp.azurewebsites.net/)
 - Melbourne: [http://melbourne.azurebootcamp.net/](http://melbourne.azurebootcamp.net/)
+- Malaysia: [http://malaysiaazurebootcamp.azurewebsites.net/](http://malaysiaazurebootcamp.azurewebsites.net/)
