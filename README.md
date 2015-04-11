@@ -43,3 +43,4 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Mexico: [http://bootcamp.azurewebsites.net/](http://bootcamp.azurewebsites.net/)
 - Melbourne: [http://melbourne.azurebootcamp.net/](http://melbourne.azurebootcamp.net/)
 - Malaysia: [http://malaysiaazurebootcamp.azurewebsites.net/](http://malaysiaazurebootcamp.azurewebsites.net/)
+- Jakarta: [http://azurebootcamp.nozyra.com/](http://azurebootcamp.nozyra.com/)
