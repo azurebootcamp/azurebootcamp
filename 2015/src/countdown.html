@@ -28,51 +28,69 @@
             <div id="CountDownTimer" data-timer="1" class="centered" style="width: 100%; height:100%;" />
         </div>
         <div id="greywrap" class="row white centered">
+            Duration (minutes): <input type="text" id="minutes" value="60" />&nbsp;Flag reminder (minutes): <input type="text" id="reminder" value="15" /><br /><br />
             <button class="btn btn-success startTimer">Start Session</button>
             <button class="btn btn-danger stopTimer">Pause Session</button>
-            <br />
         </div>
-
     </div>
-
+    <div id="footerwrap">
+    </div>
     <script>
         jQuery(document).ready(function ($) {
-            var sessionDuration = 60;
-            var startQuestion = 15;
-
-            var timer = $('#CountDownTimer');
-            timer.data('timer', sessionDuration * 60);
-
-            var timeCircles = timer.TimeCircles({
-                start: false,
-                "bg_width": 0.5,
-                "fg_width": 0.03666666666666667,
-                "circle_bg_color": "#90989F",
-                time: {
-                    Days: { show: false },
-                    Hours: { show: false }
+            function createNewTimer(sessionDuration, alertAfter) {
+                var circle = $('#CountDownTimer').TimeCircles();
+                if (circle != null) {
+                    circle.destroy();
                 }
-            }).addListener(function (unit, value, total) {
-                total = Math.abs(total);
-                var minutes = Math.floor(total / 60) % 60;
-                var seconds = total % 60;
-                if (seconds < 10) seconds = "0" + seconds;
 
-                if (minutes <= startQuestion && seconds == 58) {
-                    $('#divTimer').css('background-color', '#FF6600');
-                }
-                else if (minutes <= 2 && seconds == 58) {
-                    $('#divTimer').css('background-color', 'red');
-                }
-            }, "all");
+                var timer = $('#CountDownTimer');
+                timer.data('timer', sessionDuration * 60);
+
+                var timeCircles = timer.TimeCircles({
+                    start: false,
+                    "bg_width": 0.5,
+                    "fg_width": 0.03666666666666667,
+                    "circle_bg_color": "#90989F",
+                    time: {
+                        Days: { show: false },
+                        Hours: { show: false }
+                    }
+                }).addListener(function (unit, value, total) {
+                    total = Math.abs(total);
+                    var minutes = Math.floor(total / 60) % 60;
+                    var seconds = total % 60;
+                    if (seconds < 10) seconds = "0" + seconds;
+
+                    if (minutes <= alertAfter && seconds == 1) {
+                        $('#divTimer').css('background-color', '#FF6600');
+                    }
+                    else if (minutes <= 2 && seconds == 58) {
+                        $('#divTimer').css('background-color', 'red');
+                    }
+                }, "all");
+
+                return timeCircles;
+            }
 
             // Start and stop are methods applied on the public TimeCircles instance
             $(".startTimer").click(function () {
-                $('#CountDownTimer').TimeCircles().start();
+                var sessionDuration = parseInt($('#minutes').val());
+                var startQuestion = parseInt($('#reminder').val());
+                var timerCircle = createNewTimer(sessionDuration, startQuestion);
+                timerCircle.start();
+
             });
 
             $(".stopTimer").click(function () {
                 $('#CountDownTimer').TimeCircles().stop();
+            });
+
+            $("#minutes").keypress(function (e) {
+                //if the letter is not digit then display error and don't type anything
+                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                    //display error message
+                    return false;
+                }
             });
         });
     </script>
