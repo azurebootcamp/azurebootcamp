@@ -1,0 +1,85 @@
+<html>
+<head>
+    <meta name="description" content="Global Azure Bootcamp Singapore 25th April 2015">
+    <meta name="author" content="Azure Bootcamp">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>
+        Global Azure Bootcamp Countdown, 2015
+    </title><!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/icomoon.css" type="text/css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css" data-cssintegration="font-family:Lato, serif;" data-familyname="Lato">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css" data-cssintegration="font-family:Raleway, serif;" data-familyname="Raleway">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+    <script src="assets/js/TimeCircles.js"></script>
+    <link href="assets/css/sh-default.css" rel="stylesheet" default-stylesheet="true" type="text/css">
+    <link href="assets/css/TimeCircles.css" rel="stylesheet" default-stylesheet="true" type="text/css">
+    <link href="assets/css/readme.css" rel="stylesheet" default-stylesheet="true" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="cursor: auto;">
+    <div>
+        <div id="divTimer" class="row white centered">
+            <div id="CountDownTimer" data-timer="1" class="centered" style="width: 100%; height:100%;" />
+        </div>
+        <div id="greywrap" class="row white centered">
+            <button class="btn btn-success startTimer">Start Session</button>
+            <button class="btn btn-danger stopTimer">Pause Session</button>
+            <br />
+        </div>
+
+    </div>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var sessionDuration = 60;
+            var startQuestion = 15;
+
+            var timer = $('#CountDownTimer');
+            timer.data('timer', sessionDuration * 60);
+
+            var timeCircles = timer.TimeCircles({
+                start: false,
+                "bg_width": 0.5,
+                "fg_width": 0.03666666666666667,
+                "circle_bg_color": "#90989F",
+                time: {
+                    Days: { show: false },
+                    Hours: { show: false }
+                }
+            }).addListener(function (unit, value, total) {
+                total = Math.abs(total);
+                var minutes = Math.floor(total / 60) % 60;
+                var seconds = total % 60;
+                if (seconds < 10) seconds = "0" + seconds;
+
+                if (minutes <= startQuestion && seconds == 58) {
+                    $('#divTimer').css('background-color', '#FF6600');
+                }
+                else if (minutes <= 2 && seconds == 58) {
+                    $('#divTimer').css('background-color', 'red');
+                }
+            }, "all");
+
+            // Start and stop are methods applied on the public TimeCircles instance
+            $(".startTimer").click(function () {
+                $('#CountDownTimer').TimeCircles().start();
+            });
+
+            $(".stopTimer").click(function () {
+                $('#CountDownTimer').TimeCircles().stop();
+            });
+        });
+    </script>
+</body>
+
+
+
+
+
+</html>
