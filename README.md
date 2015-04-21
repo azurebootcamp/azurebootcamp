@@ -46,3 +46,4 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Jakarta, Indonesia: [http://azurebootcamp.nozyra.com/](http://azurebootcamp.nozyra.com/) or [http://jakarta.azurebootcamp.net/](http://jakarta.azurebootcamp.net/)
 - Batam, Indonesia: [http://azurebootcamp.uib.ac.id/](http://azurebootcamp.uib.ac.id/)
 - Bandung, Indonesia: [http://bandung.azurebootcamp.net/](http://bandung.azurebootcamp.net/)
+- Pune, India: [http://www.puneusergroup.org/events/gabc2015/index.html](http://www.puneusergroup.org/events/gabc2015/index.html)
