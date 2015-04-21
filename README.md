@@ -7,12 +7,13 @@ The live version of 2015 bootcamp website (hosted as Azure Website) is available
 
 Feel free to **fork** it and use it, but do remember to update the Speaker and Sponsors photographs
 
-
 ## Technology Stack
 
 - HTML5
 - jQuery
 - CSS3
+- Google API
+- Facebook API
 
 ## How to use it?
 
@@ -21,7 +22,7 @@ Feel free to **fork** it and use it, but do remember to update the Speaker and S
 - Use Visual Studio or  Sublime Text
 - Start editing html/js/css files
 - Google Map: To change location of your map, you can follow steps provided here [Embed Maps](https://developers.google.com/maps/documentation/embed/guide)
-
+- After going live, you may want to scrape new Facebook link for your site address at [Facebook Debugger](https://developers.facebook.com/tools/debug/)
 
 ## Wishlist
 
