@@ -1,738 +1,744 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Global Azure Bootcamp Singapore 25th April 2015">
-        <meta name="author" content="Azure Bootcamp">
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <title>
-            Global Azure Bootcamp Singapore, 2015
-        </title><!-- Bootstrap core CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Custom styles for this template -->
-        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="assets/css/icomoon.css" type="text/css">
-        <link href="assets/css/animate-custom.css" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css" data-cssintegration="font-family:Lato, serif;" data-familyname=
-        "Lato">
-        <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css" data-cssintegration="font-family:Raleway, serif;" data-familyname="Raleway">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --><!--[if lt IE 9]>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Azure Bootcamp Singapore 25th April 2015">
+    <meta name="author" content="Azure Bootcamp">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>
+        Global Azure Bootcamp Singapore, 2015
+    </title><!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css"><!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/css/icomoon.css" type="text/css">
+    <link href="assets/css/animate-custom.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css" data-cssintegration="font-family:Lato, serif;" data-familyname="Lato">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet" type="text/css" data-cssintegration="font-family:Raleway, serif;" data-familyname="Raleway">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
       <script type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" src="assets/js/html5shiv.js"></script>
       <script type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" type="text/javascript" src="assets/js/respond.min.js"></script>
     <![endif]-->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
-        <script src="assets/js/azure.js"></script>
-        <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
-        <meta property="og:image" content="http://globalazurebootcampsg.azurewebsites.net/assets/img/fb_img.png">
-        <meta property="og:url" content="http://singapore.azurebootcamp.net">
-        <link href="assets/css/sh-default.css" rel="stylesheet" default-stylesheet="true" type="text/css">
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
-        <style type="text/css">
-
-        </style>
-    </head>
-    <body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="cursor: auto;">
-        <div id="navbar-main">
-            <!-- Fixed navbar -->
-            <div class="navbar navbar-inverse navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon fa fa-cloud" style="font-size:30px; color:#3498db;"></span>
-                        </button><a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon fa fa-cloud" style=
-                        "font-size:18px; color:#3498db;"></span></a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a href="#home" class="smoothScroll">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about" class="smoothScroll">About</a>
-                            </li>
-                            <li>
-                                <a href="#speakers" class="smoothScroll">Speakers</a>
-                            </li>
-                            <li>
-                                <a href="#agenda" class="smoothScroll">Agenda</a>
-                            </li>
-                            <li>
-                                <a href="#venue" class="smoothScroll">Venue</a>
-                            </li>
-                            <li>
-                                <a href="#sponsors" class="smoothScroll">Sponsors</a>
-                            </li>
-							<li>
-                                <a href="#prizes" class="smoothScroll">SWAGs</a>
-                            </li>
-                            <li>
-                                <a href="#contact" class="smoothScroll">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <p>
-                            <span style="color:white;"><b>25th April, 2015 &nbsp;&nbsp; 8:30am onwards</b> | Registrations closed due to overwhelming response!</span> &nbsp; <a class="btn btn-warning" href=
-                            "//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a>
-                        </p>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div><!-- ==== HEADERWRAP ==== -->
-        <em class="stackhive-marker"></em>
-        <div id="headerwrap" name="home">
-            <header class="clearfix">
-                <h1>
-                    <br>
-                </h1><br>
-                <br>
-            </header>
-        </div><!-- /headerwrap -->
-        <!-- ==== GREYWRAP ==== -->
-        <div id="greywrap">
-            <div class="row white">
-                <h1 class="centered">
-                    WHAT IS GLOBAL AZURE BOOTCAMP?
-                </h1><br>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 callout">
-                    <span class="icon fa fa-cloud"></span>
-                    <h2>
-                        All about Azure
-                    </h2>
-                    <p>
-                        One full day of <b>deep dive</b> sessions on Azure for Developers and IT Pro's delivered by the experts to get you started on complex topics like Media Streaming, Mobile
-                        Services, ALM, PowerShell and IoT
-                    </p>
-                </div><!-- col-lg-4 -->
-                <div class="col-lg-4 callout">
-                    <span class="icon fa fa-usd"></span>
-                    <h2>
-                        Free registration
-                    </h2>
-                    <p>
-                        Independent community event run across <b>136 countries</b> in 2014 and even more in 2015, entry to this event is totally free.<br>
-                        <br>
-                        What more! There are <b>lot of SWAGs</b> from our sponsors!
-                    </p>
-                </div><!-- col-lg-4 -->
-                <div class="col-lg-4 callout">
-                    <span class="icon fa fa-weixin"></span>
-                    <h2>
-                        Discuss with Experts
-                    </h2>
-                    <p>
-                        Have questions, need to discuss your technical issues, or looking for some advise,<br>
-                        <br>
-                        Do attend Azure bootcamp to speak to the experts
-                    </p>
-                </div><!-- col-lg-4 -->
-            </div>
-           <!-- row -->
-        </div><!-- greywrap -->
-		<div class="container">
-			<div class="row white">
-				<br />
-				<div class="col-lg-3 centered"></div>
-				<div class="col-lg-3 centered">
-                    <a href="http://www.windowsphone.com/en-us/store/app/azure-bootcamp/7bfca9ec-ab1d-4f12-a7c3-ee5605bc1c2d" target="_blank"><img src="assets/img/winphonestore.png" width="258px"></a>
-                </div>
-                <div class="col-lg-3 centered">
-					<a href="http://apps.microsoft.com/windows/en-sg/app/azure-bootcamp/8145678d-480b-43f8-b5e5-f6fcc31565fb" target="_blank"><img src="assets/img/winstore.png" width="258px"></a>
-				</div>
-				<div class="col-lg-3 centered"></div>
-            </div>
-			</div>
-        <!-- ==== ABOUT ==== -->
-        <div class="container" id="about" name="about">
-            <div class="row white">
-                <h1 class="centered">
-                    What is Global Azure Bootcamp?
-                </h1>
-                <hr>
-                <div class="col-lg-6">
-                    <p>
-                        <span style="line-height: 1.4;">On, Saturday, April 25, 2015 &nbsp;we are out to set some records</span><span style="line-height: 1.4;"></span>
-                        <span style="line-height: 1.4;"></span><span style="line-height: 1.4;">again! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                        &nbsp; &nbsp;</span><br>
-                    </p>In April of 2013 the first Global Windows Azure Bootcamp &nbsp;was held at more than <b>90 locations</b> around the globe! <b>In March 2014 it was topped with 136
-                    locations</b>! &nbsp;This year we are again doing a one day deep dive class to help thousands of people get up to speed on developing Cloud Computing Applications for Azure .<br>
-                    <br>
-                    In addition to this great learning opportunity we will have another set of hands on labs
-                </div><!-- col-lg-6 -->
-                <div class="col-lg-6">
-                    <p>
-                        <b>Singapore has hosted Azure bootcamp since 2013</b>,&nbsp;we had sessions on fascinating topics like Azure Websites, Mobile Services, Designing Allocation Planning Engine
-                        with Cloud Services and Azure IaaS.<br>
-                        <br>
-                        In 2014, we had sessions on topics like Engineering Enterprise Applications, Multi-factor authentication, SharePoint on Azure IaaS and VPN, ZUMO and Windows Azure
-                        Websites.&nbsp;
-                    </p>
-                </div>
-            </div>
-        </div><br>
-        <br>
-        <!-- section --><!-- ==== TEAM MEMBERS ==== -->
-        <div class="container blog-content" id="speakers" name="speakers">
-            <div class="row white centered">
-                <h1 class="centered">
-                    MEET OUR SPEAKERS
-                </h1>
-                <hr>
-                <br>
-                <br>
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/joeytan.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Joey Tan</b><br>
-                        Singapore
-                    </h4><p>
-                        Cloud and Enterprise Business Group Lead, Microsoft Singapore
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/faizal.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Faizal Mohamed</b><br>
-                        Singapore
-                    </h4><a href="//www.zquad.in/" class="icon fa fa-home" target="_blank"></a> 
-                    <a href="https://www.facebook.com/kmdfaizal" class="icon icon-facebook"
-                    target="_blank"></a>
-                    <p>
-                        Faizal, Microsoft MVP for Azure, has led global cloud computing and enterprise architecture initiatives driving strategy, transformation and architecture design and has helped
-                        numerous enterprise companies leverage cloud computing for strategic advantage, innovation and cost savings
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/punitganshani.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Punit Ganshani</b><br>
-                        Singapore
-                    </h4><a href="//www.ganshani.com/" class="icon fa fa-home" target="_blank"></a> <a href="//www.facebook.com/punit.ganshani" class="icon icon-facebook"
-                    target="_blank"></a> <a href="//www.twitter.com/ganshani" class="icon icon-twitter" target="_blank"></a> <a href=
-                    "//www.github.com/punitganshani" class="icon fa fa-github" target="_blank"></a>
-                    <p>
-                        Punit, Microsoft .NET MVP, is Geek, founder of KonfDB, book author and speaker in forums in Asia, UK, Brazil and US. &nbsp;He has designed and developed several hybrid
-                        Enterprise Applications, open-source frameworks, tools and Mobile Applications &nbsp;
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/matt.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Matthew Hitchcock</b><br>
-                        Singapore
-                    </h4><a href="//www.twitter.com/hitchysg" class="icon icon-twitter" target="_blank"></a> <a href="//www.facebook.com/SingaporePowerShell" class=
-                    "icon icon-facebook" target="_blank"></a>
-                    <p>
-                        Matt is a 2 year PowerShell MVP with 15+ years Microsoft Platform experience. He is currently working as a Consultant at Microsoft, delivering projects on Azure, Office 365,
-                        Private Cloud and Enterprise Mobility. Matt is the co-founder of the Singapore PowerShell User Group.
-                    </p>
-                </div><!-- col-lg-3 -->
-                
-            </div>
-            <div class="row white centered">
-                <br>
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/alvin.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Alvin Lau</b><br>
-                        Singapore
-                    </h4><a href="http://www.sgdotnet.org/" class="icon fa fa-home" target="_blank"></a> <a href="https://www.facebook.com/microlau" class="icon icon-facebook"
-                    target="_blank"></a>
-                    <p>
-                        Alvin works as a Solution Architect with a large MNC and is lover of technology. During his sparetime, Alvin is actively involved in running the Singapore .NET User Group.
-                        His areas of interests includes web services, ASP.NET, Agile Development specifically to TDD and BizTalk. 
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/gravatar.png" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Chun Siong</b><br>
-                        Singapore
-                    </h4>
-                    <p>
-                        Chun Siong is a Technical Evangelist at Microsoft Singapore Pte. Ltd.
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/senthamil.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Senthamil Selvan</b><br>
-                        Singapore
-                    </h4><a href="//www.twitter.com/altfo" class="icon icon-twitter" target="_blank"></a> <a href="//www.facebook.com/altfo" class="icon icon-facebook"
-                    target="_blank"></a>
-                    <p>
-                        Senthamil is Microsoft MVP in Windows Consumer Apps and has 11+ years of experience in Microsoft Platform. He has published several Windows 8 and Windows Phone 8.1 Apps in
-                        Store
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/gravatar.png" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Justin Barias</b><br>
-                        Malaysia
-                    </h4>
-                    <p>
-                        Justin is Technical Solutions Manager at Infront Consulting and has very strong experience in designing and deploying private and hybrid IaaS infrastructure in the region.  He was the first Private Cloud Immersion Experience Champion (in Philippines)
-                    </p>
-                </div><!-- col-lg-3 -->
-                 
-            </div>
-            <div class="row white centered">
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/dinesh.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Dinesh Priyankara</b><br>
-                        Sri Lanka
-                    </h4><a href="//dinesql.blogspot.com/" class="icon fa fa-home" target="_blank"></a> <a href="https://www.facebook.com/dinesh.priyankara.35" class=
-                    "icon icon-facebook" target="_blank"></a> <a href="https://twitter.com/Dinesh_Priya" class="icon icon-twitter" target=
-                    "_blank"></a>
-                    <p>
-                        Dinesh Priyankara (MSc IT) is a SQL Server MVP in Sri Lanka. He is currently stationed as a Senior Architect - Specialist at Virtusa (Pvt) Ltd and maintains his technical blog
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/sandeep.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Sandeep Joshi</b><br>
-                        Singapore
-                    </h4>
-                    <p>
-                        Sandeep, Microsoft MVP for ALM, is a senior architect with 14+ years of experience in enterprise architecture, application development and solution delivery. He is an agile
-                        coach with expertise in application lifecycle management.
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/tan.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Tan Tian-An</b><br>
-                        Singapore
-                    </h4><a href="https://www.facebook.com/tantianan" class="icon icon-facebook" target="_blank"></a>
-                    <p>
-                        Bringing productivity to the masses, Tian-An's sessions helps various audiences discover gems in Microsoft Office products the way Microsoft designed them to work. In the past
-                        year, the hot topic has been Power BI and data analysis tools with Excel and Office 365.
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/brennon.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Brennon Kwok</b><br>
-                        Singapore
-                    </h4><a href="//www.ucprimer.com/" class="icon fa fa-home" target="_blank"></a>
-                    <p>
-                        Brennon is a Lync Server MVP (Microsoft Most Valuable Professional) and has spoken at numerous technical events and seminars such as TechEd and Community Technology Updates.
-                        He is senior UC Solution Architect at Polycom Asia Pacific Pte Ltd and has over 7 years&rsquo; experience in UC solutions and architecture.
-                    </p>
-                </div><!-- col-lg-3 -->
-                
-            </div>
-            
-            <div class="row white centered">
-                 <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/triston.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Triston Wan</b><br>
-                        Singapore
-                    </h4>
-                    <p>
-                        Triston is Snr. Consultant with a System Integrator based in Singapore. He is MCSE since year 2005, Redhat Certified Engineer on EL4 and has done several implementation on
-                        various versions of Exchange Servers. He is co-founder of the Singapore Messagingtalk User Group(SG-MTUG) and moderator/author in Messagingtalk.org.
-                    </p>
-                </div><!-- col-lg-3 -->
-                <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/saranya.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Saranya Sriram</b><br>
-                        Singapore
-                    </h4>
-                    <p>
-                        Saranya is a Tech Evangelist, Azure at Microsoft Singapore.
-                    </p>
-                </div><!-- col-lg-3 -->   
-                 <div class="col-lg-3 centered">
-                    <img class="img img-circle" src="assets/img/team/raymondgoh.jpg" height="120px" width="120px" alt=""><br>
-                    <h4>
-                        <b>Raymond Goh</b><br>
-                        Singapore
-                    </h4>
-                    <p>
-                        Raymond Goh has been in the IT industry for more than 14 years. He is currently the Senior Systems Engineer for Veeam Software supporting the Asia region. As a lead systems engineer for Asia, Raymond is the main interface to Veeam’s alliance partners and Veeam’s Product Management and Engineering teams worldwide.
-                    </p>
-                </div><!-- col-lg-3 -->            
-            </div>
-        </div><!-- container -->
-        <!-- ==== SECTION DIVIDER4 ==== -->
-        <div class="container" id="agenda" name="agenda">
-            <br>
-            <div class="row">
-                <br>
-                <h1 class="centered">
-                    AGENDA
-                </h1>
-                <hr>
-            </div>
-            <div class="row centered">
-                <h2 class="centered">
-                    Registration
-                </h2><br>
-                <span>8:30am - 9:00am</span>
-                <h2 class="centered">
-                    Keynote
-                </h2><br>
-                <span><b>Joey Tan</b><br>
-                Cloud and Enterprise Business Group Lead, Microsoft Singapore<br>
-                9:00am - 9:45am</span>
-            </div>
-            <div class="row centered">
-                <h2>
-                    Break
-                </h2><span>9:45am - 10:00am</span>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>
-                        Developer Track
-                    </h2><br>
-                    <b>Connected Sensor, Data and Analytics</b> &nbsp;<b>- IoT and Azure</b><br>
-                    Punit Ganshani (Microsoft MVP, Singapore)<br>
-                    10:00am - 11:00am<br>
-                    <br>
-                    <b>Building Premium Video Experience with Azure Media Services</b><br>
-                    Chun Siong (Microsoft, Singapore)<br>
-                    11:00am- 12:00pm
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <h2>
-                        IT Pro/Data Track
-                    </h2><br>
-                    <b>Azure PowerShell DSC (Desired State Configuration) &ndash; Introduction</b><br>
-                    Matt Hitchcock (Microsoft MVP, Singapore)<br>
-                    10:00am - 11:00am<br>
-                    <br>
-                    <b>Azure RemoteApp</b><br>
-                    Senthamil Selvan (Microsoft MVP, Singapore)<br>
-                    11:00am- 12:00pm
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <h2>
-                        Special Track
-                    </h2><br>
-                    <b>Office365 Identity Management</b><br>
-                    Brennon Kwok (Microsoft MVP, Singapore)<br>
-                    10:00am - 11:00am<br>
-                    <br>
-                    <b>Azure PowerShell DSC (Desired State Configuration) &ndash; Deep Dive</b><br>
-                    Matt Hitchcock (Microsoft MVP, Singapore)<br>
-                    11:00am- 12:00pm
-                </div>
-            </div>
-            <div class="row centered">
-                <h2>
-                    Lunch
-                </h2><span>12:00pm - 1:00pm</span>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <br>
-                    <b>Azure Websites</b><br>
-                    Saranya Sriram (Microsoft, Singapore)<br>
-                    1:00pm - 2:00pm<br>
-                    <br>
-                    <b>ALM with Azure and VS Online</b><br>
-                    Sandeep Josh (Microsoft MVP, Singapore)<br>
-                    2:10pm- 3:10pm
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <br>
-                    <b>Azure AD Premium -Streamline your administration and support</b><br>
-                    Triston Wan (Microsoft MVP, Singapore)<br>
-                    1:00pm - 2:00pm<br>
-                    <br>
-                    <b>Power BI on Azure</b><br>
-                    Tan Tian-An (Microsoft MVP, Singapore)<br>
-                    2:10pm- 3:10pm
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <br>
-                    <b>Azure Site Recovery - Enterprise-like DR on Cloud</b><br>
-                    Justin Barias (Malaysia)<br>
-                    1:00pm - 2:00pm<br>
-                    <br>
-                    <b>Veeam 2 Azure - Availability for Modern Data Center</b><br>
-                    Raymond Goh (Veeam, Singapore)<br>
-                    2:10pm- 3:10pm
-                </div>
-            </div>
-            <div class="row centered">
-                <h2>
-                    Break
-                </h2><span>3:10pm - 03:30pm</span>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <br>
-                    <b>Azure Mobile Service</b><br>
-                    Senthamil Selvan (Microsoft MVP, Singapore)<br>
-                    3:30pm- 4:30pm<br>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <br>
-                    <b>Azure Machine Learning</b><br>
-                    Dinesh Priyankara (Microsoft MVP, Sri Lanaka)<br>
-                    3:30pm- 4:30pm<br>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <br>
-                    <b>Ask the Experts</b><br>
-                    One to one with Microsoft MVPs<br>
-                    3:30pm- 4:30pm<br>
-                </div>
-            </div>
-            <div class="row centered">
-                <h2 class="centered">
-                    Closing / Lucky Draw / Group Photo
-                </h2><br>
-                <span>4:30pm - 5:00pm</span>
-            </div><!-- /row -->
-            <div class="row white centered">
-                <p>
-                    <a class="btn btn-warning" href=
-                            "//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a>
-                </p>
-            </div><!-- /row -->
-        </div><!-- /container -->
-        <!-- ==== SECTION DIVIDER6 ==== -->
-        <div class="container blog-content" id="venue" name="venue">
-            <br>
-            <div class="row">
-                <h1 class="centered">
-                    VENUE
-                </h1>
-                <hr>
-                <br>
-                <br>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <iframe width="600" height="250" frameborder="0" style="border:0" src=
-                    "https://www.google.com/maps/embed/v1/place?q=Microsoft+One+Marina+Boulevard+Singapore&amp;key=AIzaSyCuHF00XvhAa8Q2XG3V8yX2k7J6-BMoAgE" data-sh-tag-identifier=
-                    "googlemaps"></iframe>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <br>
-                    <b>Microsoft Singapore</b><br>
-                    One Marina Boulevard<br>
-                    Singapore 018989<br>
-                    <br>
-                    <b>Date:</b> 25th April, 2015<br>
-                    <b>Time:</b> 8:30 am - 5:00pm<br>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="sponsors" name="sponsors">
-            <div class="row">
-                <br>
-                <h1 class="centered">
-                    OUR LOCAL SPONSORS
-                </h1>
-                <hr>
-                <br>
-                <br>
-                <div class="col-lg-4">
-                    <a href="//www.microsoft.com/" target="_blank"><img src="assets/img/sponsors/msft.png" height="80px" width="300px" alt="Microsoft"></a>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                     <a href="http://www.infrontconsulting.com/" target="_blank"><img src="assets/img/sponsors/infront.jpg" height="80px" width="245px" alt="myget"></a>
-                </div><!-- col --> 
-                 <div class="col-lg-4">
-                    <a href="http://www.veaam.com/" target="_blank"><img src="assets/img/sponsors/veeam.png" height="90px" width="250px" alt="Veeam"></a>
-                </div><!-- col -->
-            </div><!-- row -->
-            <div class="row">
-               <br>
-                <div class="col-lg-4">
-               </div><!-- col -->   
-                <div class="col-lg-4">
-                    <a href="http://www.parallels.com/" target="_blank"><img src="assets/img/sponsors/parallels.png" height="42px" width="196px" alt="Parallels"></a>
-                </div><!-- col -->  
-                 <div class="col-lg-4">
-                    <b>If you would want to sponsor the event, please contact</b>
-                    <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com" target="_blank">Faizal</a>
-                </div><!-- col -->              
-            </div><!-- row -->
-            <div class="row">
-                <br>                
-                <h1 class="centered">
-                    OUR GLOBAL SPONSORS
-                </h1>
-                  <br>
-                <div class="col-lg-4">
-                    <a href="https://www.cleardb.com/" target="_blank"><img src="assets/img/sponsors/cleardb.png" height="80px" width="200px" alt="cleardb"></a>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <a href="http://www.bluesyntaxconsulting.com/" target="_blank"><img src="assets/img/sponsors/bluesyntax.png" height="70px" width="240px" alt="bluesyntax"></a>
-                </div><!-- col -->
-                 <div class="col-lg-4">
-                    <a href="http://cloudmonix.com/" target="_blank"><img src="assets/img/sponsors/CloudMonix.png" height="61px" width="300px" alt="cloudmonix"></a>
-                </div><!-- col -->
-            </div>
-            <div class="row">
-                <br>
-                <div class="col-lg-4">
-                    <a href="http://www.azurewatch.com/" target="_blank"><img src="assets/img/sponsors/azurewatch.png" height="40px" width="250px" alt="azurewatch"></a>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                     <a href="http://www.myget.org/" target="_blank"><img src="assets/img/sponsors/myget.png" height="60px" width="156px" alt="myget"></a>
-                </div><!-- col -->      
-                <div class="col-lg-4">
-                    <a href="http://www.cloudberrylab.com/" target="_blank"><img src="assets/img/sponsors/cloudberry.png" height="75px" width="230px" alt="cloudberry"></a>
-                </div><!-- col -->               
-            </div>
-            <div class="row">
-                <br>
-                 <div class="col-lg-4">
-				 <a href="http://www.cloudportam.com/" target="_blank"><img src="assets/img/sponsors/cloud-portam.png" height="90px" width="250px" alt="cloudportam"></a>
-             
-                 </div><!-- col -->
-                <div class="col-lg-4">
-                    <a href="http://www.codemag.com/magazine" target="_blank"><img src="assets/img/sponsors/CODEMagazine.png" height="90px" width="250px" alt="code magazine"></a>
-                </div><!-- col -->
-				 <div class="col-lg-4">
-                    <a href="http://www.jetbrains.com" target="_blank"><img src="assets/img/sponsors/jetbrains.png" height="65px" width="200px" alt="jetbrains"></a>
-                </div><!-- col -->
-            </div>
-			<div class="row">
-                <br>
-                 <div class="col-lg-4">
-				 <a href="https://zudio.co/" target="_blank"><img src="assets/img/sponsors/zudio.png" height="90px" width="250px" alt="zudio"></a>
-             
-                 </div><!-- col -->
-				 
-				 </div>
-        </div>
-		<div class="container" id="prizes" name="prizes">
-            <div class="row">
-                <br>
-				<h1 class="centered">
-                    SWAGs, PRIZES, TAKE-AWAYS
-                </h1>
-				<h2 class="centered">Surface Pro 3, Software Licenses and more...</h2> 
-				<br>
-				<div class="col-lg-3">
-					<img src="assets/img/swag/surfacepro3.jpg" height="113px" width="200px" alt="surfacepro3">
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/swag/parallels.png" height="200px" width="200px" alt="parallels">
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/swag/zudio.png" height="128px" width="128px" alt="zudio">
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/swag/cloudmonix.png" height="100px" width="300px" alt="cloudmonix">
-				</div>
-							
-							
-				</div>
-				 <div class="row">
-                <br>
-				 <div class="col-lg-4">
-					<img src="assets/img/swag/codemag.jpg" height="200px" width="120px" alt="zudio">
-				</div>	
-				<div class="col-lg-4">
-					<img src="assets/img/swag/cloudberryexplorerpro.PNG" height="100px" width="300px" alt="zudio">
-				</div>
-				<div class="col-lg-4">
-					<h2>and more surprises (thanks to our sponsors)!</h2>
-				</div>
-				</div>
-				</div>
-        <div class="container" id="contact" name="contact">
-            <div class="row">
-                <br>
-                <h1 class="centered">
-                    THANKS FOR VISITING
-                </h1>
-                <hr>
-                <br>
-                <br>
-                <div class="col-lg-4">
-                    <h3>
-                        Organizers
-                    </h3><b>Microsoft Azure User Group</b><br>
-                    <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com">Faizal Mohamed</a><br>
-                    <span class="icon fa fa-envelope"></span> <a href="mailto:microlau@gmail.com">Alvin Lau</a><br>
-                    <span class="icon fa fa-envelope"></span> <a href="mailto:punit.ganshani@gmail.com">Punit Ganshani</a><br>
-                    <span class="icon fa fa-envelope"></span> <a href="mailto:altfo@hotmail.com">Senthamil Selvan</a><br>
-                    <br>
-                    <br>
-                    <span><img src="assets/img/MVP.png"></span>
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <h3>
-                        Stay Connected...
-                    </h3>
-                    <p>
-                        Join Microsoft User Groups and stay connected with technology and updates<br>
-                        <br>
-                        <span class="icon fa fa-users"></span> <a href="//www.meetup.com/mssgug/" target="_blank">Meetup</a><br>
-                        <span class="icon icon-facebook"></span> <a href="//www.facebook.com/MWAPSG/" target="_blank">Facebook</a>
-                    </p><!-- form -->
-                </div><!-- col -->
-                <div class="col-lg-4">
-                    <h3>
-                        Support Us
-                    </h3>
-                    <p>
-                        If you would want to sponsor the event, please contact<br>
-                        <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com" target="_blank">Faizal</a><br>
-                        <br>
-                        Registrations closed due to overwhelming response, you can still join our list<br>
-                        
-                        <span class="icon fa fa-users"></span> <a class="btn btn-warning" href=
-                            "//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a><br>
-                        <br>
-                        <iframe src=
-                        "//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fglobalazurebootcampsg.azurewebsites.net&amp;width&amp;layout=button&amp;action=recommend&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=413164338859731"
-                        scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowtransparency="true"></iframe>
-                    </p>
-                </div><!-- col -->
-            </div><!-- row -->
-        </div><!-- container -->
-		<div class="container">
-			<div class="row white">
-				<br />
-				<div class="col-lg-3 centered"></div>
-				<div class="col-lg-3 centered">
-                    <a href="http://www.windowsphone.com/en-us/store/app/azure-bootcamp/7bfca9ec-ab1d-4f12-a7c3-ee5605bc1c2d" target="_blank"><img src="assets/img/winphonestore.png" width="258px"></a>
-                </div>
-                <div class="col-lg-3 centered">
-					<a href="http://apps.microsoft.com/windows/en-sg/app/azure-bootcamp/8145678d-480b-43f8-b5e5-f6fcc31565fb" target="_blank"><img src="assets/img/winstore.png" width="258px"></a>
-				</div>
-				<div class="col-lg-3 centered"></div>
-				<br />
-            </div>
-			</div>
-        <div id="footerwrap">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.5.min.js"></script>
+    <script src="assets/js/azure.js"></script>
+    <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
+    <meta property="og:image" content="http://globalazurebootcampsg.azurewebsites.net/assets/img/fb_img.png">
+    <meta property="og:url" content="http://singapore.azurebootcamp.net">
+    <link href="assets/css/sh-default.css" rel="stylesheet" default-stylesheet="true" type="text/css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
+    <style type="text/css">
+    </style>
+</head>
+<body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="cursor: auto;">
+    <div id="navbar-main">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-                <h4>
-                    { Designed by <a href="//www.ganshani.com/?ref=globalazurebootcamp" target="_blank">Punit Ganshani</a> Powered by <a href="//www.stackhive.com/" target=
-                    "_blank">StackHive</a> Hosted on <a href="//azure.microsoft.com/en-us/" target="_blank">Microsoft Azure</a> }
-                </h4>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon fa fa-cloud" style="font-size:30px; color:#3498db;"></span>
+                    </button><a class="navbar-brand hidden-xs hidden-sm" href="#home">
+                        <span class="icon fa fa-cloud" style="font-size:18px; color:#3498db;"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#home" class="smoothScroll">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="smoothScroll">About</a>
+                        </li>
+                        <li>
+                            <a href="#speakers" class="smoothScroll">Speakers</a>
+                        </li>
+                        <li>
+                            <a href="#agenda" class="smoothScroll">Agenda</a>
+                        </li>
+                        <li>
+                            <a href="#venue" class="smoothScroll">Venue</a>
+                        </li>
+                        <li>
+                            <a href="#sponsors" class="smoothScroll">Sponsors</a>
+                        </li>
+                        <li>
+                            <a href="#prizes" class="smoothScroll">SWAGs</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="smoothScroll">Contact</a>
+                        </li>                        
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        <span style="color:white;"><b>25th April, 2015 &nbsp;&nbsp; 8:30am onwards</b> | Registrations closed due to overwhelming response!</span> &nbsp; <a class="btn btn-warning" href="//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a>
+                    </p>
+                </div><!--/.nav-collapse -->
             </div>
-        </div><!-- Bootstrap core JavaScript
+        </div>
+    </div><!-- ==== HEADERWRAP ==== -->
+    <em class="stackhive-marker"></em>
+    <div id="headerwrap" name="home">
+        <header class="clearfix">
+            <h1>
+                <br>
+            </h1><br>
+            <br>
+        </header>
+    </div><!-- /headerwrap -->
+    <!-- ==== GREYWRAP ==== -->
+    <div id="greywrap">
+        <div class="row white">
+            <h1 class="centered">
+                WHAT IS GLOBAL AZURE BOOTCAMP?
+            </h1><br>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 callout">
+                <span class="icon fa fa-cloud"></span>
+                <h2>
+                    All about Azure
+                </h2>
+                <p>
+                    One full day of <b>deep dive</b> sessions on Azure for Developers and IT Pro's delivered by the experts to get you started on complex topics like Media Streaming, Mobile
+                    Services, ALM, PowerShell and IoT
+                </p>
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 callout">
+                <span class="icon fa fa-usd"></span>
+                <h2>
+                    Free registration
+                </h2>
+                <p>
+                    Independent community event run across <b>136 countries</b> in 2014 and even more in 2015, entry to this event is totally free.<br>
+                    <br>
+                    What more! There are <b>lot of SWAGs</b> from our sponsors!
+                </p>
+            </div><!-- col-lg-4 -->
+            <div class="col-lg-4 callout">
+                <span class="icon fa fa-weixin"></span>
+                <h2>
+                    Discuss with Experts
+                </h2>
+                <p>
+                    Have questions, need to discuss your technical issues, or looking for some advise,<br>
+                    <br>
+                    Do attend Azure bootcamp to speak to the experts
+                </p>
+            </div><!-- col-lg-4 -->
+        </div>
+        <!-- row -->
+    </div><!-- greywrap -->
+    <div class="container">
+        <div class="row white">
+            <br />
+            <div class="col-lg-3 centered"></div>
+            <div class="col-lg-3 centered">
+                <a href="http://www.windowsphone.com/en-us/store/app/azure-bootcamp/7bfca9ec-ab1d-4f12-a7c3-ee5605bc1c2d" target="_blank"><img src="assets/img/winphonestore.png" width="258px"></a>
+            </div>
+            <div class="col-lg-3 centered">
+                <a href="http://apps.microsoft.com/windows/en-sg/app/azure-bootcamp/8145678d-480b-43f8-b5e5-f6fcc31565fb" target="_blank"><img src="assets/img/winstore.png" width="258px"></a>
+            </div>
+            <div class="col-lg-3 centered"></div>
+        </div>
+    </div>
+    <!-- ==== ABOUT ==== -->
+    <div class="container" id="about" name="about">
+        <div class="row white">
+            <h1 class="centered">
+                What is Global Azure Bootcamp?
+            </h1>
+            <hr>
+            <div class="col-lg-6">
+                <p>
+                    <span style="line-height: 1.4;">On, Saturday, April 25, 2015 &nbsp;we are out to set some records</span><span style="line-height: 1.4;"></span>
+                    <span style="line-height: 1.4;"></span><span style="line-height: 1.4;">
+                        again! &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        &nbsp; &nbsp;
+                    </span><br>
+                </p>In April of 2013 the first Global Windows Azure Bootcamp &nbsp;was held at more than <b>90 locations</b> around the globe! <b>
+                    In March 2014 it was topped with 136
+                    locations
+                </b>! &nbsp;This year we are again doing a one day deep dive class to help thousands of people get up to speed on developing Cloud Computing Applications for Azure .<br>
+                <br>
+                In addition to this great learning opportunity we will have another set of hands on labs
+            </div><!-- col-lg-6 -->
+            <div class="col-lg-6">
+                <p>
+                    <b>Singapore has hosted Azure bootcamp since 2013</b>,&nbsp;we had sessions on fascinating topics like Azure Websites, Mobile Services, Designing Allocation Planning Engine
+                    with Cloud Services and Azure IaaS.<br>
+                    <br>
+                    In 2014, we had sessions on topics like Engineering Enterprise Applications, Multi-factor authentication, SharePoint on Azure IaaS and VPN, ZUMO and Windows Azure
+                    Websites.&nbsp;
+                </p>
+            </div>
+        </div>
+    </div><br>
+    <br>
+    <!-- section --><!-- ==== TEAM MEMBERS ==== -->
+    <div class="container blog-content" id="speakers" name="speakers">
+        <div class="row white centered">
+            <h1 class="centered">
+                MEET OUR SPEAKERS
+            </h1>
+            <hr>
+            <br>
+            <br>
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/joeytan.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Joey Tan</b><br>
+                    Singapore
+                </h4><p>
+                    Cloud and Enterprise Business Group Lead, Microsoft Singapore
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/faizal.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Faizal Mohamed</b><br>
+                    Singapore
+                </h4><a href="//www.zquad.in/" class="icon fa fa-home" target="_blank"></a>
+                <a href="https://www.facebook.com/kmdfaizal" class="icon icon-facebook"
+                   target="_blank"></a>
+                <p>
+                    Faizal, Microsoft MVP for Azure, has led global cloud computing and enterprise architecture initiatives driving strategy, transformation and architecture design and has helped
+                    numerous enterprise companies leverage cloud computing for strategic advantage, innovation and cost savings
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/punitganshani.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Punit Ganshani</b><br>
+                    Singapore
+                </h4><a href="//www.ganshani.com/" class="icon fa fa-home" target="_blank"></a> <a href="//www.facebook.com/punit.ganshani" class="icon icon-facebook"
+                                                                                                   target="_blank"></a> <a href="//www.twitter.com/ganshani" class="icon icon-twitter" target="_blank"></a> <a href="//www.github.com/punitganshani" class="icon fa fa-github" target="_blank"></a>
+                <p>
+                    Punit, Microsoft .NET MVP, is Geek, founder of KonfDB, book author and speaker in forums in Asia, UK, Brazil and US. &nbsp;He has designed and developed several hybrid
+                    Enterprise Applications, open-source frameworks, tools and Mobile Applications &nbsp;
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/matt.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Matthew Hitchcock</b><br>
+                    Singapore
+                </h4><a href="//www.twitter.com/hitchysg" class="icon icon-twitter" target="_blank"></a> <a href="//www.facebook.com/SingaporePowerShell" class="icon icon-facebook" target="_blank"></a>
+                <p>
+                    Matt is a 2 year PowerShell MVP with 15+ years Microsoft Platform experience. He is currently working as a Consultant at Microsoft, delivering projects on Azure, Office 365,
+                    Private Cloud and Enterprise Mobility. Matt is the co-founder of the Singapore PowerShell User Group.
+                </p>
+            </div><!-- col-lg-3 -->
+
+        </div>
+        <div class="row white centered">
+            <br>
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/alvin.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Alvin Lau</b><br>
+                    Singapore
+                </h4><a href="http://www.sgdotnet.org/" class="icon fa fa-home" target="_blank"></a> <a href="https://www.facebook.com/microlau" class="icon icon-facebook"
+                                                                                                        target="_blank"></a>
+                <p>
+                    Alvin works as a Solution Architect with a large MNC and is lover of technology. During his sparetime, Alvin is actively involved in running the Singapore .NET User Group.
+                    His areas of interests includes web services, ASP.NET, Agile Development specifically to TDD and BizTalk.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/chunsiong.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Tan Chun Siong</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Chun Siong is the Program Owner of the Microsoft Student Ambassador Program in Singapore. Prior to joining Microsoft as Technical Evangelist, he represented Singapore in the Microsoft Imagine Cup 2009 in Egypt and was the mentor for a couple of hackathons, such as Angelhack 2013 and Isobar Create 32.  He also runs Imagine Cup competition on a yearly basis
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/senthamil.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Senthamil Selvan</b><br>
+                    Singapore
+                </h4><a href="//www.twitter.com/altfo" class="icon icon-twitter" target="_blank"></a> <a href="//www.facebook.com/altfo" class="icon icon-facebook"
+                                                                                                         target="_blank"></a>
+                <p>
+                    Senthamil is Microsoft MVP in Windows Consumer Apps and has 11+ years of experience in Microsoft Platform. He has published several Windows 8 and Windows Phone 8.1 Apps in
+                    Store
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/justin.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Justin Barias</b><br>
+                    Malaysia
+                </h4>
+                <p>
+                    Justin is Technical Solutions Manager at Infront Consulting and has very strong experience in designing and deploying private and hybrid IaaS infrastructure in the region.  He was the first Private Cloud Immersion Experience Champion (in Philippines)
+                </p>
+            </div><!-- col-lg-3 -->
+
+        </div>
+        <div class="row white centered">
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/dinesh.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Dinesh Priyankara</b><br>
+                    Sri Lanka
+                </h4><a href="//dinesql.blogspot.com/" class="icon fa fa-home" target="_blank"></a> <a href="https://www.facebook.com/dinesh.priyankara.35" class="icon icon-facebook" target="_blank"></a> <a href="https://twitter.com/Dinesh_Priya" class="icon icon-twitter" target="_blank"></a>
+                <p>
+                    Dinesh Priyankara (MSc IT) is a SQL Server MVP in Sri Lanka. He is currently stationed as a Senior Architect - Specialist at Virtusa (Pvt) Ltd and maintains his technical blog
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/sandeep.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Sandeep Joshi</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Sandeep, Microsoft MVP for ALM, is a senior architect with 14+ years of experience in enterprise architecture, application development and solution delivery. He is an agile
+                    coach with expertise in application lifecycle management.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/tan.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Tan Tian-An</b><br>
+                    Singapore
+                </h4><a href="https://www.facebook.com/tantianan" class="icon icon-facebook" target="_blank"></a>
+                <p>
+                    Bringing productivity to the masses, Tian-An's sessions helps various audiences discover gems in Microsoft Office products the way Microsoft designed them to work. In the past
+                    year, the hot topic has been Power BI and data analysis tools with Excel and Office 365.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/brennon.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Brennon Kwok</b><br>
+                    Singapore
+                </h4><a href="//www.ucprimer.com/" class="icon fa fa-home" target="_blank"></a>
+                <p>
+                    Brennon is a Lync Server MVP (Microsoft Most Valuable Professional) and has spoken at numerous technical events and seminars such as TechEd and Community Technology Updates.
+                    He is senior UC Solution Architect at Polycom Asia Pacific Pte Ltd and has over 7 years&rsquo; experience in UC solutions and architecture.
+                </p>
+            </div><!-- col-lg-3 -->
+
+        </div>
+
+        <div class="row white centered">
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/triston.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Triston Wan</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Triston is Snr. Consultant with a System Integrator based in Singapore. He is MCSE since year 2005, Redhat Certified Engineer on EL4 and has done several implementation on
+                    various versions of Exchange Servers. He is co-founder of the Singapore Messagingtalk User Group(SG-MTUG) and moderator/author in Messagingtalk.org.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/saranya.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Saranya Sriram</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Saranya is a Tech Evangelist, Azure at Microsoft Singapore.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/raymondgoh.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Raymond Goh</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Raymond Goh has been in the IT industry for more than 14 years. He is currently the Senior Systems Engineer for Veeam Software supporting the Asia region. As a lead systems engineer for Asia, Raymond is the main interface to Veeam’s alliance partners and Veeam’s Product Management and Engineering teams worldwide.
+                </p>
+            </div><!-- col-lg-3 -->
+            <div class="col-lg-3 centered">
+                <img class="img img-circle" src="assets/img/team/terence.jpg" height="120px" width="120px" alt=""><br>
+                <h4>
+                    <b>Terence Lim</b><br>
+                    Singapore
+                </h4>
+                <p>
+                    Terence, a graduate from Carnegie Mellon University and Imperial College London, as an Intern-to-MACH with Microsoft in 2012 was actively involved in the execution of Microsoft hackathons.  He has competed against hundreds of participants around Europe in the JP Morgan Code-for-Good Hackathon in London and had emerged champions. He has also mentored and organized a 3d-animation hackathon in Rwanda, Africa.  
+                </p>
+            </div>
+        </div>
+    </div><!-- container -->
+    <!-- ==== SECTION DIVIDER4 ==== -->
+    <div class="container" id="agenda" name="agenda">
+        <br>
+        <div class="row">
+            <br>
+            <h1 class="centered">
+                AGENDA
+            </h1>
+            <hr>
+        </div>
+        <div class="row centered">
+            <h2 class="centered">
+                Registration
+            </h2><br>
+            <span>8:30am - 9:00am</span>
+            <h2 class="centered">
+                Keynote
+            </h2><br>
+            <span>
+                <b>Joey Tan</b><br>
+                Cloud and Enterprise Business Group Lead, Microsoft Singapore<br>
+                9:00am - 9:45am
+            </span>
+        </div>
+        <div class="row centered">
+            <h2>
+                Break
+            </h2><span>9:45am - 10:00am</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <h2>
+                    Developer Track
+                </h2><br>
+                <b>Connected Sensor, Data and Analytics</b> &nbsp;<b>- IoT and Azure</b><br>
+                Punit Ganshani (Microsoft MVP, Singapore)<br>
+                10:00am - 11:00am<br>
+                <br>
+                <b>Building Premium Video Experience with Azure Media Services</b><br>
+                Chun Siong & Terence Lim (Microsoft, Singapore)<br>
+                11:00am- 12:00pm
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <h2>
+                    IT Pro/Data Track
+                </h2><br>
+                <b>Azure PowerShell DSC (Desired State Configuration) &ndash; Introduction</b><br>
+                Matt Hitchcock (Microsoft MVP, Singapore)<br>
+                10:00am - 11:00am<br>
+                <br>
+                <b>Azure RemoteApp</b><br>
+                Senthamil Selvan (Microsoft MVP, Singapore)<br>
+                11:00am- 12:00pm
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <h2>
+                    Special Track
+                </h2><br>
+                <b>Office365 Identity Management</b><br>
+                Brennon Kwok (Microsoft MVP, Singapore)<br>
+                10:00am - 11:00am<br>
+                <br>
+                <b>Azure PowerShell DSC (Desired State Configuration) &ndash; Deep Dive</b><br>
+                Matt Hitchcock (Microsoft MVP, Singapore)<br>
+                11:00am- 12:00pm
+            </div>
+        </div>
+        <div class="row centered">
+            <h2>
+                Lunch
+            </h2><span>12:00pm - 1:00pm</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <br>
+                <b>Azure Websites</b><br>
+                Saranya Sriram (Microsoft, Singapore)<br>
+                1:00pm - 2:00pm<br>
+                <br>
+                <b>ALM with Azure and VS Online</b><br>
+                Sandeep Josh (Microsoft MVP, Singapore)<br>
+                2:10pm- 3:10pm
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <br>
+                <b>Azure AD Premium -Streamline your administration and support</b><br>
+                Triston Wan (Microsoft MVP, Singapore)<br>
+                1:00pm - 2:00pm<br>
+                <br>
+                <b>Power BI on Azure</b><br>
+                Tan Tian-An (Microsoft MVP, Singapore)<br>
+                2:10pm- 3:10pm
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <br>
+                <b>Azure Site Recovery - Enterprise-like DR on Cloud</b><br>
+                Justin Barias (Malaysia)<br>
+                1:00pm - 2:00pm<br>
+                <br>
+                <b>Veeam 2 Azure - Availability for Modern Data Center</b><br>
+                Raymond Goh (Veeam, Singapore)<br>
+                2:10pm- 3:10pm
+            </div>
+        </div>
+        <div class="row centered">
+            <h2>
+                Break
+            </h2><span>3:10pm - 03:30pm</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <br>
+                <b>Azure Mobile Service</b><br>
+                Senthamil Selvan (Microsoft MVP, Singapore)<br>
+                3:30pm- 4:30pm<br>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <br>
+                <b>Azure Machine Learning</b><br>
+                Dinesh Priyankara (Microsoft MVP, Sri Lanaka)<br>
+                3:30pm- 4:30pm<br>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <br>
+                <b>Ask the Experts</b><br>
+                One to one with Microsoft MVPs<br>
+                3:30pm- 4:30pm<br>
+            </div>
+        </div>
+        <div class="row centered">
+            <h2 class="centered">
+                Closing / Lucky Draw / Group Photo
+            </h2><br>
+            <span>4:30pm - 5:00pm</span>
+        </div><!-- /row -->
+        <div class="row white centered">
+            <p>
+                <a class="btn btn-warning" href="//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a>
+            </p>
+        </div><!-- /row -->
+    </div><!-- /container -->
+    <!-- ==== SECTION DIVIDER6 ==== -->
+    <div class="container blog-content" id="venue" name="venue">
+        <br>
+        <div class="row">
+            <h1 class="centered">
+                VENUE
+            </h1>
+            <hr>
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <iframe width="600" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Microsoft+One+Marina+Boulevard+Singapore&amp;key=AIzaSyCuHF00XvhAa8Q2XG3V8yX2k7J6-BMoAgE" data-sh-tag-identifier="googlemaps"></iframe>
+            </div><!-- col -->
+            <div class="col-lg-4">
+
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <br>
+                <b>Microsoft Singapore</b><br>
+                One Marina Boulevard<br>
+                Singapore 018989<br>
+                <br>
+                <b>Date:</b> 25th April, 2015<br>
+                <b>Time:</b> 8:30 am - 5:00pm<br>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="sponsors" name="sponsors">
+        <div class="row">
+            <br>
+            <h1 class="centered">
+                OUR LOCAL SPONSORS
+            </h1>
+            <hr>
+            <br>
+            <br>
+            <div class="col-lg-4">
+                <a href="//www.microsoft.com/" target="_blank"><img src="assets/img/sponsors/msft.png" height="80px" width="300px" alt="Microsoft"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.infrontconsulting.com/" target="_blank"><img src="assets/img/sponsors/infront.jpg" height="80px" width="245px" alt="myget"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.veaam.com/" target="_blank"><img src="assets/img/sponsors/veeam.png" height="90px" width="250px" alt="Veeam"></a>
+            </div><!-- col -->
+        </div><!-- row -->
+        <div class="row">
+            <br>
+            <div class="col-lg-4">
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.parallels.com/" target="_blank"><img src="assets/img/sponsors/parallels.png" height="42px" width="196px" alt="Parallels"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <b>If you would want to sponsor the event, please contact</b>
+                <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com" target="_blank">Faizal</a>
+            </div><!-- col -->
+        </div><!-- row -->
+        <div class="row">
+            <br>
+            <h1 class="centered">
+                OUR GLOBAL SPONSORS
+            </h1>
+            <br>
+            <div class="col-lg-4">
+                <a href="https://www.cleardb.com/" target="_blank"><img src="assets/img/sponsors/cleardb.png" height="80px" width="200px" alt="cleardb"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.bluesyntaxconsulting.com/" target="_blank"><img src="assets/img/sponsors/bluesyntax.png" height="70px" width="240px" alt="bluesyntax"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://cloudmonix.com/" target="_blank"><img src="assets/img/sponsors/CloudMonix.png" height="61px" width="300px" alt="cloudmonix"></a>
+            </div><!-- col -->
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-lg-4">
+                <a href="http://www.azurewatch.com/" target="_blank"><img src="assets/img/sponsors/azurewatch.png" height="40px" width="250px" alt="azurewatch"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.myget.org/" target="_blank"><img src="assets/img/sponsors/myget.png" height="60px" width="156px" alt="myget"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.cloudberrylab.com/" target="_blank"><img src="assets/img/sponsors/cloudberry.png" height="75px" width="230px" alt="cloudberry"></a>
+            </div><!-- col -->
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-lg-4">
+                <a href="http://www.cloudportam.com/" target="_blank"><img src="assets/img/sponsors/cloud-portam.png" height="90px" width="250px" alt="cloudportam"></a>
+
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.codemag.com/magazine" target="_blank"><img src="assets/img/sponsors/CODEMagazine.png" height="90px" width="250px" alt="code magazine"></a>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <a href="http://www.jetbrains.com" target="_blank"><img src="assets/img/sponsors/jetbrains.png" height="65px" width="200px" alt="jetbrains"></a>
+            </div><!-- col -->
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-lg-4">
+                <a href="https://zudio.co/" target="_blank"><img src="assets/img/sponsors/zudio.png" height="90px" width="250px" alt="zudio"></a>
+
+            </div><!-- col -->
+
+        </div>
+    </div>
+    <div class="container" id="prizes" name="prizes">
+        <div class="row">
+            <br>
+            <h1 class="centered">
+                SWAGs, PRIZES, TAKE-AWAYS
+            </h1>
+            <h2 class="centered">Surface Pro 3, Software Licenses and more...</h2>
+            <br>
+            <div class="col-lg-3">
+                <img src="assets/img/swag/surfacepro3.jpg" height="113px" width="200px" alt="surfacepro3">
+            </div>
+            <div class="col-lg-3">
+                <img src="assets/img/swag/parallels.png" height="200px" width="200px" alt="parallels">
+            </div>
+            <div class="col-lg-3">
+                <img src="assets/img/swag/zudio.png" height="128px" width="128px" alt="zudio">
+            </div>
+            <div class="col-lg-3">
+                <img src="assets/img/swag/cloudmonix.png" height="100px" width="300px" alt="cloudmonix">
+            </div>
+
+
+        </div>
+        <div class="row">
+            <br>
+            <div class="col-lg-4">
+                <img src="assets/img/swag/codemag.jpg" height="200px" width="120px" alt="zudio">
+            </div>
+            <div class="col-lg-4">
+                <img src="assets/img/swag/cloudberryexplorerpro.PNG" height="100px" width="300px" alt="zudio">
+            </div>
+            <div class="col-lg-4">
+                <h2>and more surprises (thanks to our sponsors)!</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="contact" name="contact">
+        <div class="row">
+            <br>
+            <h1 class="centered">
+                THANKS FOR VISITING
+            </h1>
+            <hr>
+            <br>
+            <br>
+            <div class="col-lg-4">
+                <h3>
+                    Organizers
+                </h3><b>Microsoft Azure User Group</b><br>
+                <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com">Faizal Mohamed</a><br>
+                <span class="icon fa fa-envelope"></span> <a href="mailto:microlau@gmail.com">Alvin Lau</a><br>
+                <span class="icon fa fa-envelope"></span> <a href="mailto:punit.ganshani@gmail.com">Punit Ganshani</a><br>
+                <span class="icon fa fa-envelope"></span> <a href="mailto:altfo@hotmail.com">Senthamil Selvan</a><br>
+                <br>
+                <br>
+                <span><img src="assets/img/MVP.png"></span>
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <h3>
+                    Stay Connected...
+                </h3>
+                <p>
+                    Join Microsoft User Groups and stay connected with technology and updates<br>
+                    <br>
+                    <span class="icon fa fa-users"></span> <a href="//www.meetup.com/mssgug/" target="_blank">Meetup</a><br>
+                    <span class="icon icon-facebook"></span> <a href="//www.facebook.com/MWAPSG/" target="_blank">Facebook</a>
+                </p><!-- form -->
+            </div><!-- col -->
+            <div class="col-lg-4">
+                <h3>
+                    Support Us
+                </h3>
+                <p>
+                    If you would want to sponsor the event, please contact<br>
+                    <span class="icon fa fa-envelope"></span> <a href="mailto:kmdfaizal@yahoo.com" target="_blank">Faizal</a><br>
+                    <br>
+                    Registrations closed due to overwhelming response, you can still join our list<br>
+
+                    <span class="icon fa fa-users"></span> <a class="btn btn-warning" href="//www.meetup.com/mssgug/events/220752986/" target="_blank">RSVP in waitlist!</a><br>
+                    <br>
+                    <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fglobalazurebootcampsg.azurewebsites.net&amp;width&amp;layout=button&amp;action=recommend&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=413164338859731"
+                            scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowtransparency="true"></iframe>
+                </p>
+            </div><!-- col -->
+        </div><!-- row -->
+    </div><!-- container -->
+    <div class="container">
+        <div class="row white">
+            <br />
+            <div class="col-lg-3 centered"></div>
+            <div class="col-lg-3 centered">
+                <a href="http://www.windowsphone.com/en-us/store/app/azure-bootcamp/7bfca9ec-ab1d-4f12-a7c3-ee5605bc1c2d" target="_blank"><img src="assets/img/winphonestore.png" width="258px"></a>
+            </div>
+            <div class="col-lg-3 centered">
+                <a href="http://apps.microsoft.com/windows/en-sg/app/azure-bootcamp/8145678d-480b-43f8-b5e5-f6fcc31565fb" target="_blank"><img src="assets/img/winstore.png" width="258px"></a>
+            </div>
+            <div class="col-lg-3 centered"></div>
+            <br />
+        </div>
+    </div>
+    <div id="footerwrap">
+        <div class="container">
+            <h4>
+                { Designed by <a href="//www.ganshani.com/?ref=globalazurebootcamp" target="_blank">Punit Ganshani</a> Powered by <a href="//www.stackhive.com/" target="_blank">StackHive</a> Hosted on <a href="//azure.microsoft.com/en-us/" target="_blank">Microsoft Azure</a> }
+            </h4>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
     ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="assets/js/retina.js"></script>
-        <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
-        <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-        <script type="text/javascript" src="assets/js/jquery-func.js"></script>
-    </body>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="assets/js/retina.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-func.js"></script>
+</body>
 </html>
