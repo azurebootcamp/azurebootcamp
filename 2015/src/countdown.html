@@ -22,16 +22,16 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <meta property="og:title" content="Global Azure Bootcamp Singapore - 25th April 2015">
 </head>
-<body data-spy="scroll" data-offset="0" data-target="#navbar-main" style="cursor: auto;">
-    <div>
+<body data-spy="scroll" style="cursor: auto;">
+     
         <div id="divTimer" class="row white centered">
             <div id="CountDownTimer" data-timer="1" class="centered" style="width: 100%; height:100%;" />
         </div>
-    </div>
-    <div id="footerwrap" style="position: fixed; bottom: 0px; left: 0px; width: 100%;">
-	    Duration (minutes): <input type="text" id="minutes" value="60" />&nbsp;Flag reminder (minutes): <input type="text" id="reminder" value="15" /><br /><br />
+     
+    <div id="footer" class="centered row" style="position: fixed; bottom: 0px; left: 0px; width: 100%;">
+	    Duration (minutes): <input type="text" id="minutes" value="60" />&nbsp;Flag reminder (minutes): <input type="text" id="reminder" value="15" />&nbsp;
             <button class="btn btn-success startTimer">Start Session</button>
-            <button class="btn btn-danger stopTimer">Pause Session</button>
+            &nbsp;<button class="btn btn-danger stopTimer">Pause Session</button>
     </div>
     <script>
         jQuery(document).ready(function ($) {
@@ -41,6 +41,8 @@
                     circle.destroy();
                 }
 
+                $('#divTimer').css('background-color', '#FFFFFF');
+                                
                 var timer = $('#CountDownTimer');
                 timer.data('timer', sessionDuration * 60);
 
@@ -49,6 +51,7 @@
                     "bg_width": 0.5,
                     "fg_width": 0.03666666666666667,
                     "circle_bg_color": "#90989F",
+                    count_past_zero: false,
                     time: {
                         Days: { show: false },
                         Hours: { show: false }
@@ -62,7 +65,7 @@
                     if (minutes <= alertAfter && seconds == 1) {
                         $('#divTimer').css('background-color', '#FF6600');
                     }
-                    else if (minutes <= 2 && seconds == 58) {
+                    else if (minutes <= 2) {
                         $('#divTimer').css('background-color', 'red');
                     }
                 }, "all");
