@@ -5,7 +5,7 @@
  */
 
 var latitude = $('#map').data('latitude');// 1.282387;
-var longitude =103.850243
+var longitude =$('#map').data('longitude');//103.850243
 
 // jQuery to collapse the navbar on scroll
 $(window).scroll(function() {
