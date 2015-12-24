@@ -1,0 +1,114 @@
+﻿{
+  "Location": {
+    "Name": "Test",
+    "Latitude": 1.282387,
+    "Longitude": 103.850243,
+    "Address": "One Marina Boulevard, Singapore"
+  },
+  "Social": {
+    "Meetup": "http://www.meetup.com/mssgug/",
+    "Facebook": "https://www.facebook.com/MWAPSG"
+  },
+  "Registration": {
+    "Status": "Open",
+    "Link": "https://www.facebook.com/MWAPSG"
+  },
+  "Contact": [
+    {
+      "Name": "Faizal",
+      "Social": {
+        "Website": "www.zsquad.in",
+        "Email": "something@somewhere.com"
+      }
+    },
+    {
+      "Name": "Punit",
+      "Social": {
+        "Website": "www.ganshani.com",
+        "Email": "something@somewhere.com"
+      }
+    }
+  ],
+  "Sponsors": [
+    {
+      "Name": "Microsoft",
+      "Image": "http://globalazurebootcampsg.azurewebsites.net/assets/img/sponsors/msft.png",
+      "Link": "www.microsoft.com"
+    },
+    {
+      "Name": "Microsoft",
+      "Image": "http://globalazurebootcampsg.azurewebsites.net/assets/img/sponsors/msft.png",
+      "Link": "www.microsoft.com"
+    }
+  ],
+  "Prizes": [
+    {
+      "ImageUrl": "",
+      "Link": ""
+    }
+  ],
+  "Tracks": [
+    {
+      "Name": "Developer Track",
+      "Sessions": [
+        {
+          "Time": "8:00 AM - 8:45 AM",
+          "Title": "Some New Session",
+          "Speaker": {
+            "Name": "Punit",
+            "ImageUrl": "http://www.ganshani.com/wp-content/uploads/2013/10/pg.jpg",
+            "Description": "I know this author",
+            "Social": {
+              "Twitter": "www.twitter.com/ganshani",
+              "Website": "www.ganshani.com"
+            }
+          }
+        },
+        {
+          "Time": "9:00 AM - 10:00 AM",
+          "Title": "Another Session",
+          "Speaker": {
+            "Name": "Senthamil",
+            "ImageUrl": "",
+            "Description": "I know this author",
+            "Social": {
+              "Twitter": "www.twitter.com/altfo",
+              "Website": "www.altfo.com"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Name": "IT Pro Track",
+      "Sessions": [
+        {
+          "Time": "8:00 AM - 8:45 AM",
+          "Title": "Some New Session",
+          "Speaker": {
+            "Name": "Punit",
+            "ImageUrl": "http://www.ganshani.com/wp-content/uploads/2013/10/pg.jpg",
+            "Description": "I know this author",
+            "Social": {
+              "Twitter": "www.twitter.com/ganshani",
+              "Website": "www.ganshani.com"
+            }
+          }
+        },
+        {
+          "Time": "9:00 AM - 10:00 AM",
+          "Title": "Another Session",
+          "Speaker": {
+            "Name": "Faizal",
+            "ImageUrl": "",
+            "Description": "I know this author",
+            "Social": {
+              "Twitter": "www.twitter.com/kmdfaizal",
+              "Website": "www.kmdfaizal.com"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

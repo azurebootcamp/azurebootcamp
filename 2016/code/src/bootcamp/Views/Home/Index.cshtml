@@ -1,0 +1,69 @@
+﻿@model bootcamp.Models.LocationInfo
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@section Menu{
+    @if (Model.Social != null)
+    {
+        <li>
+            <a class="page-scroll" href="#contact">contact</a>
+        </li>
+    }
+
+    @if (Model.Agenda != null)
+    {
+        <li>
+            <a class="page-scroll" href="#agenda">agenda</a>
+        </li>
+    }
+}
+
+@if (Model.Social != null)
+{
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+                <p>Feel free to stay connected with us!</p>
+                <ul class="list-inline banner-social-buttons">
+                    @if (String.IsNullOrEmpty(Model.Social.Website))
+                    {
+                        <li>
+                            <a href="@Model.Social.Website" class="btn btn-default btn-lg"><i class="fa fa-group fa-fw"></i> <span class="network-name">Web</span></a>
+                        </li>
+                    }
+                    @if (String.IsNullOrEmpty(Model.Social.Meetup))
+                    {
+                        <li>
+                            <a href="@Model.Social.Meetup" class="btn btn-default btn-lg"><i class="fa fa-group fa-fw"></i> <span class="network-name">Meetup</span></a>
+                        </li>
+                    }
+                    @if (String.IsNullOrEmpty(Model.Social.Facebook))
+                    {
+                        <li>
+                            <a href="@Model.Social.Facebook" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                        </li>
+                    }
+                    @if (String.IsNullOrEmpty(Model.Social.Twitter))
+                    {
+                        <li>
+                            <a href="@Model.Social.Twitter" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        </li>
+                    }
+                    @if (String.IsNullOrEmpty(Model.Social.Google))
+                    {
+                        <li>
+                            <a href="@Model.Social.Google" class="btn btn-default btn-lg"><i class="fa fa-google fa-fw"></i> <span class="network-name">Google</span></a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- Map Section -->
+<div id="map" data-latitude='@Model.Location.Latitude' data-longitude='@Model.Location.Longitude'></div>
