@@ -6,30 +6,29 @@ using Microsoft.AspNet.Mvc;
 using Newtonsoft.Json;
 using bootcamp.Models;
 using System.Net;
+using System.IO;
+using System.Net.Http;
 
 namespace bootcamp.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index(string location)
+        public async Task<IActionResult> Index(string location)
         {
             LocationInfo locationInfo = null;
 
-            try {
-                if (!string.IsNullOrEmpty(location))
-                {
-                    var url =
-                        String.Format("https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/locations/{0}/data.json", location.ToLowerInvariant());
-                    string contents;
-                    using (var wc = new System.Net.WebClient())
-                        contents = wc.DownloadString(url);
+            if (!string.IsNullOrEmpty(location))
+            {
+                var url =
+                    String.Format("https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/locations/{0}/data.json", location.ToLowerInvariant());
 
+                using (HttpClient client = new HttpClient())
+                using (HttpResponseMessage response = await client.GetAsync(url))
+                using (HttpContent content = response.Content)
+                {                    
+                    var contents = await content.ReadAsStringAsync();
                     locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
                 }
-            }
-            catch(WebException ex) // some problem getting the file
-            {
-                locationInfo = null; //TODO: need to give a default value instead of NULL
             }
 
             return View(locationInfo);

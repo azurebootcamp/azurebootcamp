@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet5-bootcamp-93eac473-3afa-46ac-b696-a24b1e847243",
   "version": "1.0.0-*",
   "compilationOptions": {
@@ -34,7 +34,11 @@
   },
 
   "frameworks": {
-    "dnx451": { },
+    "dnx451": {
+      "dependencies": {
+        "System.Net.Http": "4.0.1-beta-23516"
+      }
+    },
     "dnxcore50": { }
   },
 
