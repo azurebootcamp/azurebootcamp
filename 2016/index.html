@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Punit Ganshani">
+
+    <title>Global Azure Bootcamp 2016</title>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/TimeCircles.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+     <link href="css/TimeCircles.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+              $("#CountDownTimer").TimeCircles({
+                        "bg_width": 0.5,
+                        "fg_width": 0.03666666666666667,
+                        "circle_bg_color": "#90989F",
+                        count_past_zero: false
+               })
+               .addListener(function (unit, value, total) {
+                    total = Math.abs(total);
+                    if (total == 0){
+                        $("#CountDownTimer").hide();
+                        $('#divTimer').hide();
+                        $('.intro-body').addClass('azurelogo');
+                    }
+                }, "all");                  
+                    
+        });
+    </script>
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+   
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-cloud"></i><span class="light">Azure</span> Bootcamp
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                            <a class="page-scroll" href="#about">about</a>
+                        </li>
+                        <li>
+                            <a href="http://www.meetup.com/mssgug/" target="_blank">Stay Connected</a>
+                        </li>
+                        <!--<li>
+                            <a class="page-scroll" href="#agenda">agenda</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#venue">venue</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#sponsors">sponsors</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#giveaways">giveaways</a>
+                        </li>-->
+                        <li>
+                            <a class="page-scroll" href="#contact">contact</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                       <br />
+                       <br />
+                       <br />
+                       <br />
+                       <br />
+                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                         <!--<div id="CountDownTimer" data-timer="10" class="centered" style="width: 100%; height:100%;" />-->
+                         <div id="divTimer">
+                             <img src="/img/intro-bg-small.png" />
+                             <br />
+                                <h2>16th April<h2>
+                                <h3>The countdown has begun!</h3>
+                         <div id="CountDownTimer" data-date="2016-04-16 00:00:00" class="centered" 
+                                    style="width: 100%; height:100%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+       <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>Azure Bootcamp, 2016</h1>
+                    <div class="divider"></div>
+                    <p>More content, speakers and brain storming this year!</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12"><br /></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                           <span class="icon fa fa-cloud"></span>
+                           <br />
+                            <br />
+                            <h3>Deep Dive Sessions</h3>
+                             <p>One full day of <b>deep dive</b> sessions on Azure for Developers and IT Pro's delivered by the experts to get you started on complex topics like Media Streaming, Mobile
+                    Services, ALM, PowerShell and IoT</p>   
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                         
+                            <span class="icon fa fa-usd"></span> 
+                           <br />
+                            <br /> <h3>Free registration</h3>
+                            <p>
+                                Entry to this event is totally free! What more! There are <b>lot of SWAGs</b> from our sponsors!
+                            </p>
+                        
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        
+                          <span class="icon fa fa-users"></span>
+                           <br />
+                            <br /> <h3>Discuss with Experts</h3>
+                            <p>
+                                Have questions, need to discuss your technical issues, or looking for some advise, do attend to speak to the experts
+                            </p>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="where-section">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Happening across the globe!</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Us</h2>
+                <p>Feel free to stay connected with us!</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="http://www.meetup.com/mssgug/" class="btn btn-default btn-lg"><i class="fa fa-group fa-fw"></i> <span class="network-name">Meetup</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/MWAPSG" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                     
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map" data-latitude='1.282387' data-longitude='103.850243'></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Punit Ganshani 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO6AXw4-I0uuUxAKBKMtoB0eUmKfobjH0&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
