@@ -16,19 +16,25 @@ namespace bootcamp.Controllers
         public async Task<IActionResult> Index(string location)
         {
             LocationInfo locationInfo = null;
+            try {
+                if (!string.IsNullOrEmpty(location))
+                {
+                    var url =
+                        String.Format("https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/locations/{0}/data.json", location.ToLowerInvariant());
 
-            if (!string.IsNullOrEmpty(location))
-            {
-                var url =
-                    String.Format("https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/locations/{0}/data.json", location.ToLowerInvariant());
+                    using (HttpClient client = new HttpClient())
+                    using (HttpResponseMessage response = await client.GetAsync(url))
+                    using (HttpContent content = response.Content)
+                    {
+                        var contents = await content.ReadAsStringAsync();
 
-                using (HttpClient client = new HttpClient())
-                using (HttpResponseMessage response = await client.GetAsync(url))
-                using (HttpContent content = response.Content)
-                {                    
-                    var contents = await content.ReadAsStringAsync();
-                    locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
+                        locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
+                    }
                 }
+            }
+            catch
+            {                
+                return RedirectToAction("Error");
             }
 
             return View(locationInfo);

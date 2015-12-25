@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Speaker>
+    @{
+        var speakerList = Extensions.Split<Speaker>(Model.ToList(), 2);
+    }
+    <section id="speakers" class="container content-section text-center">
+        <div class="container">
+            <div class="section-heading scrollpoint sp-effect3">
+                <h1>Speakers</h1>
+                <div class="divider"></div>
+            </div>
+            @foreach (var row in speakerList)
+            {
+                <div class="row">
+                    @foreach (var speaker in row)
+                {
+                        <div class="col-lg-6 scrollpoint sp-effect2">
+                            <h3 class="col-xs-12" style="text-align:left;">@speaker.Name</h3>
+                            <div class="col-xs-4"><img style="width:150px; height:auto;" src="@speaker.ImageUrl"></div>
+                            <div class="col-xs-8" style="text-align:left;">@speaker.Description</div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    <div class="col-xs-12" style="text-align:left;"><br /></div>
+                </div>
+            }
+        </div>
+    </section>

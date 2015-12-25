@@ -54,7 +54,8 @@ namespace bootcamp
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{location=Singapore}");
+                    template: "{location=Singapore}",
+                    defaults: new { controller = "Home", Action = "Index" });
             });
         }
 

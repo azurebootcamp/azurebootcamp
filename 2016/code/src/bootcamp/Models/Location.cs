@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace bootcamp.Models
@@ -13,7 +14,24 @@ namespace bootcamp.Models
         public Contact[] Contact { get; set; }
         public Sponsor[] Sponsors { get; set; }
         public Prize[] Prizes { get; set; }
-        public Track[]   Agenda { get; set; }
+        public Track[] Tracks { get; set; }
+
+        public static Dictionary<string, List<Session>> ToTimeWiseTracks(Track[] Tracks)
+        {
+            var output =new Dictionary<string, List<Session>>();
+            if (Tracks == null)
+                return output;
+
+            var distinctTime = Tracks.SelectMany(x => x.Sessions.Select(y => y.Time)).Distinct();
+
+            foreach (var time in distinctTime)
+            {
+                var sessions = Tracks.SelectMany(x => x.Sessions.Where(y => y.Time.Equals(time)));
+                output.Add(time, sessions.ToList());
+            }
+
+            return output;
+        }
     }
 
     public class Location
@@ -48,6 +66,11 @@ namespace bootcamp.Models
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public Social Social { get; set; }
+
+        public string UniqueId()
+        {
+            return Name.RemoveSpecialCharacters();
+        }
     }
 
     public class Contact

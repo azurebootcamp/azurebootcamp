@@ -1,0 +1,6 @@
+﻿@model Session
+
+<div class="agenda-event">
+    <b>@Model.Title</b><br>
+    @await Html.PartialAsync("_SessionSpeaker", Model.Speaker)
+</div>

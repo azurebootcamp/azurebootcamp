@@ -2,30 +2,12 @@
 var latitude = $('#map').data('latitude');// 1.282387;
 var longitude = $('#map').data('longitude');//103.850243
 
-// jQuery to collapse the navbar on scroll
-$(window).scroll(function () {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});
+$(window).resize(function () {
+    var h = $(window).height(),
+        offsetTop = 60; // Calculate the top offset
+    $('#map').css('height', 200);
+}).resize();
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function () {
-    $('a.page-scroll').bind('click', function (event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
-});
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function () {
-    $('.navbar-toggle:visible').click();
-});
 
 // Google Maps Scripts
 // When the window has finished loading create our google map below
@@ -166,7 +148,7 @@ function init() {
     var map = new google.maps.Map(mapElement, mapOptions);
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-    var image = 'images/map-marker.png';
+    var image = '../../images/map-marker.png';
     var myLatLng = new google.maps.LatLng(latitude, longitude);
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
