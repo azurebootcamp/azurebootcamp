@@ -45,5 +45,5 @@ $(function () {
     $('#CountDownTimer .time_circles .textDiv_Minutes').css('color', timerColor);
     $('#CountDownTimer .time_circles .textDiv_Seconds').css('color', timerColor);
 
-
+    $('.time_circles h4').css('color', timerColor);
 });

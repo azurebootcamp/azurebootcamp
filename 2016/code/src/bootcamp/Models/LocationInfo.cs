@@ -10,15 +10,15 @@ namespace bootcamp.Models
     {
         public Location Location { get; set; }
         public Social Social { get; set; }
-        public Registration Registration { get; set; }
-        public Contact[] Contact { get; set; }
+        public Callout Callout { get; set; }
+        public Contact[] Organizers { get; set; }
         public Sponsor[] Sponsors { get; set; }
         public Prize[] Prizes { get; set; }
         public Track[] Tracks { get; set; }
 
         public static Dictionary<string, List<Session>> ToTimeWiseTracks(Track[] Tracks)
         {
-            var output =new Dictionary<string, List<Session>>();
+            var output = new Dictionary<string, List<Session>>();
             if (Tracks == null)
                 return output;
 
@@ -40,13 +40,14 @@ namespace bootcamp.Models
         public float Latitude { get; set; }
         public float Longitude { get; set; }
         public string Address { get; set; }
-    } 
+    }
 
-    public class Registration
+    public class Callout
     {
-        public string Status { get; set; }
         public string Link { get; set; }
-    } 
+        public string Text { get; set; }
+        public string Type { get; set; }
+    }
     public class Track
     {
         public string Name { get; set; }
@@ -77,7 +78,7 @@ namespace bootcamp.Models
     {
         public string Name { get; set; }
         public Social Social { get; set; }
-    } 
+    }
 
     public class Sponsor
     {
@@ -88,6 +89,7 @@ namespace bootcamp.Models
 
     public class Prize
     {
+        public string Name { get; set; }
         public string ImageUrl { get; set; }
         public string Link { get; set; }
     }

@@ -1,0 +1,13 @@
+﻿@model Contact[]
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <h3>Organizers</h3>
+        @foreach (var contact in Model)
+        {
+            if (contact.Social != null)
+            {
+                <span class='icon fa fa-envelope'></span> <a href="mailto:@contact.Social.Email">@contact.Name</a>
+            }
+        }
+    </div>
+</div>

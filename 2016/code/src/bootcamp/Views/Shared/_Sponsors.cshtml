@@ -1,0 +1,19 @@
+﻿@model Sponsor[]
+<section id="sponsors">
+    <div class="container">
+        <div class="section-heading scrollpoint sp-effect3">
+            <h1>Sponsors</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a href="#" target="_blank"><img src="~/images/MVP.png" height="100px" alt="Microsoft MVP"></a><br />
+                <br />
+            </div>
+            @foreach (var sponsor in Model)
+            {
+                <div class="col-lg-4 text-center"> <a href="@sponsor.Link" target="_blank"><img src="@sponsor.Image" style="margin-top:80px;" height="40px" style="margin-top:40px;" alt="@sponsor.Name"></a> </div>
+            }
+        </div>
+    </div>
+</section>

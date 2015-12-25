@@ -5,6 +5,7 @@
 /// <reference path="js/placeholdem.min.js" />
 /// <reference path="js/rs-plugin/js/jquery.themepunch.plugins.min.js" />
 /// <reference path="js/rs-plugin/js/jquery.themepunch.revolution.js" />
+/// <reference path="js/site.js" />
 /// <reference path="js/site.min.js" />
 /// <reference path="js/slick.min.js" />
 /// <reference path="js/timecircles.js" />

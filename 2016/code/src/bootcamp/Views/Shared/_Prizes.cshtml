@@ -1,0 +1,21 @@
+﻿@model Prize[]
+<section id="giveaways">
+    <div class="container">
+        <div class="section-heading scrollpoint sp-effect3">
+            <h1>The awesome giveaways!</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="row"> </div>
+        <!-- row -->
+        <div class="row">
+            @foreach (var giveaway in Model)
+            {
+                <div class="col-lg-4 text-center">
+                    <a href="@giveaway.Link" target="_blank"><img src="@giveaway.ImageUrl" height="200px"></a> <br>
+                    <h2>@giveaway.Name</h2>
+                </div>
+            }
+        </div>
+        <!-- row -->
+    </div>
+</section>

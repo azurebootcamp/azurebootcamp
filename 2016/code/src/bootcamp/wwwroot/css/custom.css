@@ -13,13 +13,13 @@
         align-content: center;
     }
 
-        .timer-simple .timer-simple-body .brand-heading {
-            font-size: 40px;
-        }
+    .timer-simple .timer-simple-body .brand-heading {
+        font-size: 40px;
+    }
 
-        .timer-simple .timer-simple-body .intro-text {
-            font-size: 18px;
-        }
+    .timer-simple .timer-simple-body .intro-text {
+        font-size: 18px;
+    }
 
 .intro {
     display: table;
@@ -46,6 +46,12 @@
 
 header .navbar-default ul.navbar-nav {
     padding-top: 0px;
+}
+
+a.speakersocial {
+    transition: color .1s ease-in, background .1s ease-in;
+    text-decoration: none;
+    outline: 0;
 }
 
 .where-section {

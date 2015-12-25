@@ -9,20 +9,21 @@
     "Meetup": "http://www.meetup.com/mssgug/",
     "Facebook": "https://www.facebook.com/MWAPSG"
   },
-  "Registration": {
-    "Status": "Open",
-    "Link": "https://www.facebook.com/MWAPSG"
+  "Callout": {
+    "Text": "Call for speakers",
+    "Link": "https://www.facebook.com/MWAPSG",
+    "Type": "info"
   },
-  "Contact": [
+  "Organizers": [
     {
-      "Name": "Faizal",
+      "Name": "Contact1",
       "Social": {
         "Website": "www.zsquad.in",
         "Email": "something@somewhere.com"
       }
     },
     {
-      "Name": "Punit",
+      "Name": "Contact2",
       "Social": {
         "Website": "www.ganshani.com",
         "Email": "something@somewhere.com"
@@ -43,8 +44,14 @@
   ],
   "Prizes": [
     {
-      "ImageUrl": "",
-      "Link": ""
+      "ImageUrl": "http://www.gadgetreview.com/wp-content/uploads/2012/09/Soundstick-Wireless.jpeg",
+      "Link": "http://sg.harmankardon.com/harman-kardon-product-detail_sg/soundsticks-wireless.html",
+      "Name": "SoundSticks Wireless"
+    },
+    {
+      "ImageUrl": "https://dbvc4uanumi2d.cloudfront.net/cdn/4.5.22/wp-content/themes/oculus/img/order/dk2-product.jpg",
+      "Link": "https://www1.oculus.com/order/dk1",
+      "Name": "Oculus Rift"
     }
   ],
   "Tracks": [
@@ -55,12 +62,12 @@
           "Time": "8:00 AM - 8:45 AM",
           "Title": "Some New Session",
           "Speaker": {
-            "Name": "Punit",
-            "ImageUrl": "http://www.ganshani.com/wp-content/uploads/2013/10/pg.jpg",
+            "Name": "Dilbert",
+            "ImageUrl": "https://www.marketingtechblog.com/wp-content/uploads/2011/06/dilbert.gif",
             "Description": "I know this author",
             "Social": {
-              "Twitter": "www.twitter.com/ganshani",
-              "Website": "www.ganshani.com"
+              "Twitter": "www.twitter.com/Dilbert",
+              "Website": "www.Dilbert.com"
             }
           }
         },
@@ -68,12 +75,12 @@
           "Time": "9:00 AM - 10:00 AM",
           "Title": "Another Session",
           "Speaker": {
-            "Name": "Senthamil",
+            "Name": "Mickey",
             "ImageUrl": "",
             "Description": "I know this author",
             "Social": {
-              "Twitter": "www.twitter.com/altfo",
-              "Website": "www.altfo.com"
+              "Twitter": "www.twitter.com/Mickey",
+              "Website": "www.Mickey.com"
             }
           }
         }
@@ -86,12 +93,12 @@
           "Time": "8:00 AM - 8:45 AM",
           "Title": "Some New Session",
           "Speaker": {
-            "Name": "Punit",
-            "ImageUrl": "http://www.ganshani.com/wp-content/uploads/2013/10/pg.jpg",
+            "Name": "Dilbert",
+            "ImageUrl": "https://www.marketingtechblog.com/wp-content/uploads/2011/06/dilbert.gif",
             "Description": "I know this author",
             "Social": {
-              "Twitter": "www.twitter.com/ganshani",
-              "Website": "www.ganshani.com"
+              "Twitter": "www.twitter.com/dilbert",
+              "Website": "www.dilbert.com"
             }
           }
         },
@@ -99,12 +106,12 @@
           "Time": "9:00 AM - 10:00 AM",
           "Title": "Another Session",
           "Speaker": {
-            "Name": "Faizal",
+            "Name": "Don",
             "ImageUrl": "",
             "Description": "I know this author",
             "Social": {
-              "Twitter": "www.twitter.com/kmdfaizal",
-              "Website": "www.kmdfaizal.com"
+              "Twitter": "www.twitter.com/don",
+              "Website": "www.don.com"
             }
           }
         }
