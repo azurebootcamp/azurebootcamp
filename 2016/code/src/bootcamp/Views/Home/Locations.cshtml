@@ -1,0 +1,8 @@
+﻿@model LocationIndex
+@{ 
+    Layout = "_LayoutLocations";
+}
+@foreach (var location in Model.Locations)
+{
+    <li><a href="/@location">@location</a></li>
+}

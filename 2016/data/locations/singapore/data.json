@@ -1,0 +1,20 @@
+﻿{
+  "Location": {
+    "Name": "Singapore",
+    "Latitude": 1.282387,
+    "Longitude": 103.850243,
+    "Address": "One Marina Boulevard, Singapore"
+  },
+  "Social": {
+    "Meetup": "http://www.meetup.com/mssgug/",
+    "Facebook": "https://www.facebook.com/MWAPSG"
+  },
+  "Registration": {
+    "Status": "Open",
+    "Link": "https://www.facebook.com/MWAPSG"
+  },
+  "Contact": null,
+  "Sponsors": null,
+  "Prizes": null,
+  "Tracks": null
+}

@@ -25,10 +25,11 @@ $('.navbar-collapse ul li a').click(function () {
 
 $(function () {
  
+    var timerColor = $("#CountDownTimer").data('bgcolor'); 
     $("#CountDownTimer").TimeCircles({
         "bg_width": 0.5,
         "fg_width": 0.03666666666666667,
-        "circle_bg_color": "#90989F",
+        "circle_bg_color": timerColor,
         count_past_zero: false
     })
      .addListener(function (unit, value, total) {
@@ -38,4 +39,11 @@ $(function () {
              $('#divTimer').text("");
          }
      }, "all");
+
+    $('#CountDownTimer .time_circles .textDiv_Hours').css('color', timerColor);
+    $('#CountDownTimer .time_circles .textDiv_Days').css('color', timerColor);
+    $('#CountDownTimer .time_circles .textDiv_Minutes').css('color', timerColor);
+    $('#CountDownTimer .time_circles .textDiv_Seconds').css('color', timerColor);
+
+
 });

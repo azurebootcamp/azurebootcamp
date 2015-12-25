@@ -1,4 +1,27 @@
-﻿.intro {
+﻿.timer-simple {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+}
+
+    .timer-simple .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+        align-content: center;
+    }
+
+        .timer-simple .timer-simple-body .brand-heading {
+            font-size: 40px;
+        }
+
+        .timer-simple .timer-simple-body .intro-text {
+            font-size: 18px;
+        }
+
+.intro {
     display: table;
     width: 100%;
     height: auto;

@@ -15,8 +15,14 @@ namespace bootcamp.Controllers
     {
         public async Task<IActionResult> Index(string location)
         {
+            if (string.IsNullOrEmpty(location) || location == "unknown")
+            {
+                return RedirectToAction("Locations", "Home");
+            }
+
             LocationInfo locationInfo = null;
-            try {
+            try
+            {
                 if (!string.IsNullOrEmpty(location))
                 {
                     var url =
@@ -33,12 +39,26 @@ namespace bootcamp.Controllers
                 }
             }
             catch
-            {                
+            {
                 return RedirectToAction("Error");
             }
 
             return View(locationInfo);
 
+        }
+
+        public async Task<IActionResult> Locations()
+        {
+            var url = "https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/index.json";
+
+            using (HttpClient client = new HttpClient())
+            using (HttpResponseMessage response = await client.GetAsync(url))
+            using (HttpContent content = response.Content)
+            {
+                var contents = await content.ReadAsStringAsync();
+                //contents = @"{""Locations"": [""test""]}";
+                return View(JsonConvert.DeserializeObject<LocationIndex>(contents));
+            }
         }
 
         public IActionResult Error()

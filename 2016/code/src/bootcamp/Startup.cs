@@ -25,14 +25,14 @@ namespace bootcamp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(); 
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug(); 
+            loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
             {
@@ -44,18 +44,23 @@ namespace bootcamp
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear()); 
+            app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
 
-            app.UseStaticFiles(); 
+            app.UseStaticFiles();
 
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                   name: "locations",
+                   template: "{controller}/{action}",
+                   defaults: new { controller = "Home", Action = "Locations" });
+                routes.MapRoute(
                     name: "default",
-                    template: "{location=Singapore}",
+                    template: "{location=unknown}",
                     defaults: new { controller = "Home", Action = "Index" });
+
             });
         }
 
