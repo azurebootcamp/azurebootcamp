@@ -40,6 +40,11 @@
       "Name": "Microsoft",
       "Image": "http://globalazurebootcampsg.azurewebsites.net/assets/img/sponsors/msft.png",
       "Link": "www.microsoft.com"
+    },
+    {
+      "Name": "Microsoft",
+      "Image": "http://globalazurebootcampsg.azurewebsites.net/assets/img/sponsors/msft.png",
+      "Link": "www.microsoft.com"
     }
   ],
   "Prizes": [
@@ -47,6 +52,11 @@
       "ImageUrl": "http://www.gadgetreview.com/wp-content/uploads/2012/09/Soundstick-Wireless.jpeg",
       "Link": "http://sg.harmankardon.com/harman-kardon-product-detail_sg/soundsticks-wireless.html",
       "Name": "SoundSticks Wireless"
+    },
+    {
+      "ImageUrl": "https://dbvc4uanumi2d.cloudfront.net/cdn/4.5.22/wp-content/themes/oculus/img/order/dk2-product.jpg",
+      "Link": "https://www1.oculus.com/order/dk1",
+      "Name": "Oculus Rift"
     },
     {
       "ImageUrl": "https://dbvc4uanumi2d.cloudfront.net/cdn/4.5.22/wp-content/themes/oculus/img/order/dk2-product.jpg",
