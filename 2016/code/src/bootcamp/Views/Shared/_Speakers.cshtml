@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Speaker>
 @{
-    var speakerList = Extensions.Split<Speaker>(Model.ToList(), 3);
+    var speakerList = Extensions.Split<Speaker>(Model.ToList(), 2);
 }
 <section id="speakers" class="container content-section text-center">
     <div class="container">
@@ -10,20 +10,29 @@
         </div>
         @foreach (var row in speakerList)
             {
-            <div class="row">
+            <div class="row text-left">
                 @foreach (var speaker in row)
                 {
+                    const int MaxDescLength = 5;
                     var imageUrl = speaker.ImageUrl;
+                    var description = speaker.Description;
+                    bool trimmed = false;
                     var bioID = "sbio-" + speaker.UniqueId();
                     if (string.IsNullOrEmpty(imageUrl))
                     {
                         imageUrl = "~/images/gravatar.png";
                     }
-
-                    <div class="col-lg-4 scrollpoint sp-effect2">
-                        <div class="col-xs-4"><img class="img-circle" style="width:100px; height:auto;" src="@imageUrl"></div>
-                        <h4 class="col-xs-8" style="text-align:left;"><b>@speaker.Name</b></h4>
-                        <div class="col-xs-4 text-left">
+                    if (description.Length > MaxDescLength)
+                    {
+                        description = description.Substring(0, MaxDescLength);
+                        trimmed = true;
+                    }
+                    <div class="col-lg-6">
+                        <h2 class="col-xs-12">@speaker.Name</h2>
+                        <div class="col-xs-4"><img style="width:150px;" class="img-circle" src="@imageUrl"></div>
+                        <div class="col-xs-8">
+                            @description
+                            <br />
                             @if (!String.IsNullOrEmpty(speaker.Social.Website))
                             {
                                 <a href="@speaker.Social.Website" class="speakersocial"><i class="fa fa-group fa-fw"></i></a>
@@ -44,34 +53,37 @@
                             {
                                 <a href="@speaker.Social.Google" class="speakersocial"><i class="fa fa-google fa-fw"></i></a>
                             }
-                           
-                        </div>
-                        <div class="col-xs-8 text-left">
-                            (&nbsp;<a href="#" data-toggle="modal" data-target="#@bioID">More</a>&nbsp;)                            
+                            @if (trimmed)
+                            {
+                                <a href="#" data-toggle="modal" data-target="#@bioID">More</a>
+                            }
                         </div>
                     </div>
-                    <div class="text-left modal fade @bioID" tabindex="-1" role="dialog"
-                         aria-labelledby="@bioID" aria-hidden="true" id="@bioID">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-                                    <h4 class="modal-title">@speaker.Name</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-4"><img src="@imageUrl" style="width:100%;" /></div>
-                                        <div class="col-md-8">@speaker.Description</div>
+                    @if (trimmed)
+                    {
+                        <div class="text-left modal fade @bioID" tabindex="-1" role="dialog"
+                             aria-labelledby="@bioID" aria-hidden="true" id="@bioID">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                                        <h4 class="modal-title">@speaker.Name</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="@imageUrl" style="width:100%;" /></div>
+                                            <div class="col-md-8">@speaker.Description</div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
+                                <!-- /.modal-content -->
                             </div>
-                            <!-- /.modal-content -->
+                            <!-- /.modal-dialog -->
                         </div>
-                        <!-- /.modal-dialog -->
-                    </div>
+                    }
                 }
             </div>
             <div class="row">

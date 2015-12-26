@@ -14,7 +14,7 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "bootcamp", "src\bootcamp\bo
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{FD13F7B5-945E-4148-A37B-9DFDCB4F1AC1}"
 	ProjectSection(SolutionItems) = preProject
-		..\data\locations\test\data.json = ..\data\locations\test\data.json
+		..\data\locations\demo\data.json = ..\data\locations\demo\data.json
 	EndProjectSection
 EndProject
 Global
