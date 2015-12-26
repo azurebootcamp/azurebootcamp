@@ -13,7 +13,7 @@
             <div class="row text-left">
                 @foreach (var speaker in row)
                 {
-                    const int MaxDescLength = 5;
+                    const int MaxDescLength = 200;
                     var imageUrl = speaker.ImageUrl;
                     var description = speaker.Description;
                     bool trimmed = false;
@@ -29,9 +29,12 @@
                     }
                     <div class="col-lg-6">
                         <h2 class="col-xs-12">@speaker.Name</h2>
-                        <div class="col-xs-4"><img style="width:150px;" class="img-circle" src="@imageUrl"></div>
+                        <div class="col-xs-4"><img style="width:150px; height:auto;" src="@imageUrl"></div>
                         <div class="col-xs-8">
-                            @description
+                            @description  @if (trimmed)
+                            {
+                                <a href="#" data-toggle="modal" data-target="#@bioID">.. more</a>
+                            }
                             <br />
                             @if (!String.IsNullOrEmpty(speaker.Social.Website))
                             {
@@ -53,10 +56,7 @@
                             {
                                 <a href="@speaker.Social.Google" class="speakersocial"><i class="fa fa-google fa-fw"></i></a>
                             }
-                            @if (trimmed)
-                            {
-                                <a href="#" data-toggle="modal" data-target="#@bioID">More</a>
-                            }
+                          
                         </div>
                     </div>
                     @if (trimmed)

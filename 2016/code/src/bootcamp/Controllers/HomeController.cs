@@ -26,7 +26,7 @@ namespace bootcamp.Controllers
                 if (!string.IsNullOrEmpty(location))
                 {
                     var url =
-                        String.Format("https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/locations/{0}/data.json", location.ToLowerInvariant());
+                        String.Format("https://github.com/punitganshani/azurebootcamp-data/raw/master/2016/locations/{0}/data.json", location.ToLowerInvariant());
 
                     using (HttpClient client = new HttpClient())
                     using (HttpResponseMessage response = await client.GetAsync(url))
@@ -49,7 +49,7 @@ namespace bootcamp.Controllers
 
         public async Task<IActionResult> Locations()
         {
-            var url = "https://github.com/punitganshani/azurebootcamp/raw/master/2016/data/index.json";
+            var url = "https://github.com/punitganshani/azurebootcamp-data/raw/master/2016/index.json";
 
             using (HttpClient client = new HttpClient())
             using (HttpResponseMessage response = await client.GetAsync(url))
