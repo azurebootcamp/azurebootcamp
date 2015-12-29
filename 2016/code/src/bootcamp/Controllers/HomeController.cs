@@ -8,17 +8,27 @@ using bootcamp.Models;
 using System.Net;
 using System.IO;
 using System.Net.Http;
+using Microsoft.Extensions.OptionsModel;
+using Microsoft.Extensions.Configuration;
+using System.Diagnostics;
+using bootcamp.Utilities;
 
 namespace bootcamp.Controllers
 {
     public class HomeController : Controller
     {
-        public async Task<IActionResult> Index(string location)
+        private IOptions<AppSettings> Configuration;
+
+        public HomeController(IOptions<AppSettings> configuration)
         {
-            if (string.IsNullOrEmpty(location) || location == "unknown")
-            {
-                return RedirectToAction("Locations", "Home");
-            }
+            Configuration = configuration;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var appSettings = Configuration.Value;
+            string location = appSettings.Location;//.Get("AppSettings:Location");
+
+           // location = Startup.Location;
 
             LocationInfo locationInfo = null;
             try
@@ -37,6 +47,7 @@ namespace bootcamp.Controllers
                         locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
                     }
                 }
+
             }
             catch
             {
@@ -45,20 +56,6 @@ namespace bootcamp.Controllers
 
             return View(locationInfo);
 
-        }
-
-        public async Task<IActionResult> Locations()
-        {
-            var url = "https://github.com/punitganshani/azurebootcamp-data/raw/master/2016/index.json";
-
-            using (HttpClient client = new HttpClient())
-            using (HttpResponseMessage response = await client.GetAsync(url))
-            using (HttpContent content = response.Content)
-            {
-                var contents = await content.ReadAsStringAsync();
-                //contents = @"{""Locations"": [""test""]}";
-                return View(JsonConvert.DeserializeObject<LocationIndex>(contents));
-            }
         }
 
         public IActionResult Error()

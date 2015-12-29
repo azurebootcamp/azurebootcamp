@@ -1,14 +1,17 @@
 ﻿@model bootcamp.Models.LocationInfo
 @{
+    if (Model != null && Model.Location != null){
+        ViewBag.Location = Model.Location.Name;
+    }
+
     IEnumerable<Speaker> speakers = null;
-    if (Model.Tracks != null)
-    {
+    if (Model != null && Model.Tracks != null){
         speakers = Model.Tracks.SelectMany(x => x.Sessions.Select(y => y.Speaker));
     }
 }
 
 @section Menu{
-    @if (Model.Tracks != null)
+    @if (Model != null && Model.Tracks != null)
     {
         <li>
             <a class="page-scroll" href="#agenda">agenda</a>
@@ -17,24 +20,25 @@
             <a class="page-scroll" href="#speakers">speakers</a>
         </li>
     }
-    @if (Model.Sponsors != null)
+    @if (Model != null && Model.Sponsors != null)
     {
         <li>
             <a class="page-scroll" href="#sponsors">sponsors</a>
         </li>
     }
-    @if (Model.Prizes != null)
+    @if (Model != null && Model.Prizes != null)
     {
         <li>
             <a class="page-scroll" href="#giveaway">SWAGs</a>
         </li>
     }
-    @if (Model.Social != null && Model.Organizers != null)
+    @if (Model != null && Model.Social != null && Model.Organizers != null)
     {
         <li>
             <a class="page-scroll" href="#contact">contact</a>
         </li>
-    }   @if (Model.Location != null)
+    }
+    @if (Model != null && Model.Location != null)
     {
         <li>
             <a class="page-scroll" href="#locate">locate</a>
@@ -43,31 +47,31 @@
 }
 
 @section Callout{
-    @if (Model.Callout != null)
+    @if (Model != null && Model.Callout != null)
     {
-        <a href="@Model.Callout.Link" class="btn btn-default btn-@Model.Callout.Type">@Model.Callout.Text</a>
+        <a href="@Model.Callout.Link" class="btn btn-@Model.Callout.Type">@Model.Callout.Text</a>
     }
 }
 
-@if (Model.Tracks != null)
+@if (Model != null && Model != null && Model.Tracks != null)
 {
     @await Html.PartialAsync("_Agenda", Model.Tracks)
     @await Html.PartialAsync("_Speakers", speakers)
 }
-@if (Model.Sponsors != null)
+@if (Model != null && Model.Sponsors != null)
 {
     @await Html.PartialAsync("_Sponsors", Model.Sponsors)
 }
-@if (Model.Prizes != null)
+@if (Model != null && Model.Prizes != null)
 {
     @await Html.PartialAsync("_Prizes", Model.Prizes)
 }
-@if (Model.Social != null && Model.Organizers != null)
+@if (Model != null && Model.Social != null && Model.Organizers != null)
 {
     @await Html.PartialAsync("_Contact", Model)
 }
 
-@if (Model.Location != null)
+@if (Model != null && Model.Location != null)
 {
     @await Html.PartialAsync("_Map", Model.Location)
 }

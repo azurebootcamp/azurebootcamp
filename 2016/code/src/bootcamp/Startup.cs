@@ -1,23 +1,25 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using bootcamp.Utilities;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
+using System;
 
 namespace bootcamp
 {
     public class Startup
     {
-        public Startup(IHostingEnvironment env)
+        public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
             // Set up configuration sources.
-
             var builder = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
-
+                           .AddJsonFile("config.json", optional: true);
             builder.AddEnvironmentVariables();
+
             Configuration = builder.Build();
+
         }
 
         public IConfigurationRoot Configuration { get; set; }
@@ -25,15 +27,19 @@ namespace bootcamp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddOptions();
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
+            services.AddScoped<IConfiguration>(x => Configuration);
+
+            //var appSettings = Configuration.Get<AppSettings>("AppSettings");
+            //Location = appSettings.Location;
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
+            loggerFactory.AddConsole();
             if (env.IsDevelopment())
             {
                 app.UseBrowserLink();
@@ -45,23 +51,16 @@ namespace bootcamp
             }
 
             app.UseIISPlatformHandler(options => options.AuthenticationDescriptions.Clear());
-
             app.UseStaticFiles();
-
-            // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
-
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                   name: "locations",
-                   template: "{controller}/{action}",
-                   defaults: new { controller = "Home", Action = "Locations" });
-                routes.MapRoute(
                     name: "default",
-                    template: "{location=unknown}",
-                    defaults: new { controller = "Home", Action = "Index" });
-
+                    template: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
+
+
         }
 
         // Entry point for the application.

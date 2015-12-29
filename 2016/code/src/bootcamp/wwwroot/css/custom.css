@@ -1,4 +1,8 @@
-﻿.timer-simple {
+﻿footer a{
+    color:white;
+}
+
+.timer-simple {
     display: table;
     width: 100%;
     height: auto;
