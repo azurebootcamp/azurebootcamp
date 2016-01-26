@@ -32,5 +32,10 @@ namespace bootcamp
             }
             return sb.ToString();
         }
+
+        public static IEnumerable<TSource> DistinctBy<TSource, TKey>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector)
+        {
+            return source.Where(x => x != null).GroupBy(keySelector).Select(x => x.First()).ToList();
+        }
     }
 }

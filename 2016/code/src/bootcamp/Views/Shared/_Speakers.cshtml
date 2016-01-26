@@ -1,8 +1,10 @@
 ﻿@model IEnumerable<Speaker>
 @{
-    var speakerList = Extensions.Split<Speaker>(Model.Where(x => 
-                x != null 
-                && !string.IsNullOrEmpty(x.Name) 
+    var uniqueList = Model.DistinctBy(x => x.Name);
+
+    var speakerList = Extensions.Split<Speaker>(uniqueList.Where(x =>
+                x != null
+                && !string.IsNullOrEmpty(x.Name)
                 && !(x.Name.Equals("TBC", StringComparison.InvariantCultureIgnoreCase) || x.Name.Equals("TBD", StringComparison.InvariantCultureIgnoreCase))).ToList(), 2);
 }
 <section id="speakers" class="container content-section text-center">

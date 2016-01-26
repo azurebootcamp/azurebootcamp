@@ -75,6 +75,16 @@ namespace bootcamp.Models
         {
             return Name.RemoveSpecialCharacters();
         }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Speaker)
+            {
+                var second = (Speaker)obj;
+                return Name.Equals(second.Name, StringComparison.CurrentCultureIgnoreCase) && ImageUrl.Equals(second.ImageUrl, StringComparison.CurrentCultureIgnoreCase);
+            }
+            return false;
+        }
     }
 
     public class Contact
