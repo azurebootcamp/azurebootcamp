@@ -16,6 +16,8 @@ namespace bootcamp.Models
         public Prize[] Prizes { get; set; }
         public Track[] Tracks { get; set; }
 
+        public Callout[] Campaigns { get; set; }
+
         public static Dictionary<string, List<Session>> ToTimeWiseTracks(Track[] Tracks)
         {
             var output = new Dictionary<string, List<Session>>();
@@ -56,6 +58,7 @@ namespace bootcamp.Models
 
     public class Session
     {
+        public string SessionId { get; set; }
         public string Time { get; set; }
         public string Title { get; set; }
         public Speaker Speaker { get; set; }
