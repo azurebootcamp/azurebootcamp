@@ -23,28 +23,42 @@ namespace bootcamp.Controllers
         {
             Configuration = configuration;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string proxyUrl = "https://github.com/punitganshani/azurebootcamp-data/raw/master/2016/locations/{0}/data.json")
         {
             var appSettings = Configuration.Value;
-            string location = appSettings.Location;//.Get("AppSettings:Location");
-
-           // location = Startup.Location;
+            string location = appSettings.Location;
 
             LocationInfo locationInfo = null;
             try
             {
                 if (!string.IsNullOrEmpty(location))
                 {
-                    var url =
-                        String.Format("https://github.com/punitganshani/azurebootcamp-data/raw/master/2016/locations/{0}/data.json", location.ToLowerInvariant());
+                    var url = String.Format(proxyUrl, location.ToLowerInvariant());
+                    var uri = new Uri(url);
+                    bool isLocalFile = uri.IsFile;
 
-                    using (HttpClient client = new HttpClient())
-                    using (HttpResponseMessage response = await client.GetAsync(url))
-                    using (HttpContent content = response.Content)
+                    if (!isLocalFile)
                     {
-                        var contents = await content.ReadAsStringAsync();
+                        using (HttpClient client = new HttpClient())
+                        using (HttpResponseMessage response = await client.GetAsync(url))
+                        using (HttpContent content = response.Content)
+                        {
+                            var contents = await content.ReadAsStringAsync();
+                            locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
+                        }
 
-                        locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
+                    }
+                    else
+                    {
+                        if (System.IO.File.Exists(url))
+                        {
+                            var contents = System.IO.File.ReadAllText(url);
+                            locationInfo = JsonConvert.DeserializeObject<LocationInfo>(contents);
+                        }
+                        else
+                        {
+                            throw new FileNotFoundException("File not found at: " + url);
+                        }
                     }
                 }
 
