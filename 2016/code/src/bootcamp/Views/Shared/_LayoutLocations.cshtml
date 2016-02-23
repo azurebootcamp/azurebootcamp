@@ -6,7 +6,7 @@
     <title>Global Azure Bootcamp 2016</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta property="og:title" content="Global Azure Bootcamp 2016"> 
+    <meta property="og:title" content="Global Azure Bootcamp 2016">
     <environment names="Development,Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
@@ -19,16 +19,6 @@
 
         <link rel="stylesheet" href="~/css/TimeCircles.css" />
     </environment>
-    @*<environment names="Staging,Production">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
-              asp-fallback-href="~/lib/font-awesome/css/font-awesome.min.cs"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>*@
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top scrolled">
@@ -41,14 +31,8 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li>
+                    <li><a href="https://github.com/punitganshani/azurebootcamp/wiki" target="_blank">Wiki</a></li>
                     <li><a href="http://global.azurebootcamp.net/">Global Site</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Locations<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            @RenderBody()
-                        </ul>
-                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -57,55 +41,15 @@
         <section id="timer">
             <div class="container">
                 <div class="section-heading scrollpoint sp-effect3">
-                    <h1>Azure Bootcamp 2016</h1>
-                    <h3>Select a <b>location</b> to explore more</h3>
-                </div>
-                <div class="text-center timer-simple">
-                    <div class="timer-simple-body">
-                        <div id="divTimer">
-                            <div id="CountDownTimer" data-bgcolor="#90989F" data-date="2016-04-16 00:00:00" class="centered"
-                                 style="width: 100%; height:auto;" />
-                        </div>
-
-                    </div>
+                    <h1>Verify your JSON settings</h1>
+                    <div class="divider"></div>
+                    <p>Please ensure you have a copy of JSON before you click 'Verify JSON'</p>
                 </div>
             </div>
         </section>
-        <section id="about">
+        <section id="body">
             <div class="container">
-                <div class="section-heading scrollpoint sp-effect3">
-                    <h1>About Bootcamp</h1>
-                    <div class="divider"></div>
-                    <p>One day event where everyone, <b>globally</b>, talks about the expanding universe of Microsoft Azure!</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="about-item scrollpoint sp-effect2">
-                            <i class="fa fa-cloud fa-2x"></i>
-                            <h3>Deep Dive Sessions</h3>
-                            <p>
-                                One full day of <b>deep dive</b> sessions on Azure for Developers and IT Pro's delivered by the experts to get you started on complex topics like Media Streaming, Mobile
-                                Services, ALM, PowerShell and IoT
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="about-item scrollpoint sp-effect5">
-                            <i class="fa fa-globe fa-2x"></i>
-                            <h3>Same day across the globe</h3>
-                            <p>
-                                90 locations in 2013, 136 in 2014 and 182 in 2015. <a href="http://global.azurebootcamp.net/" target="_blank">Global Azure Bootcamp</a> has been setting records in helping thousands of people get upto speed on developing Cloud Computing Applications on Azure
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="about-item scrollpoint sp-effect5">
-                            <i class="fa fa-users fa-2x"></i>
-                            <h3>Discuss with Experts</h3>
-                            <p> Have questions, need to discuss your technical issues, or looking for some advise, do attend to speak to the experts </p>
-                        </div>
-                    </div>
-                </div>
+                @RenderBody()
             </div>
         </section>
     </div>
@@ -128,21 +72,6 @@
         <script src="~/js/custom.js" asp-append-version="true"></script>
 
     </environment>
-    @*<environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"
-                asp-fallback-src="~/lib/jquery-ui/jquery-ui.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>*@
     @RenderSection("scripts", required: false)
     <script>
         $(document).ready(function () {

@@ -76,5 +76,31 @@ namespace bootcamp.Controllers
         {
             return View();
         }
+
+        public IActionResult Verify()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [CustomExceptionFilter]
+        public IActionResult VerifyJSON(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+                throw new ArgumentNullException("No JSON entered by user");
+
+            try
+            {
+                var locationInfo = JsonConvert.DeserializeObject<LocationInfo>(value);
+                if (locationInfo == null)
+                    throw new InvalidOperationException("Could not parse JSON");
+
+                return View("Index", locationInfo);
+            }
+            catch
+            {
+                throw;
+            }
+        }
     }
 }

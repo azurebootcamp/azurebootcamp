@@ -1,6 +1,7 @@
 ﻿using bootcamp.Utilities;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -31,9 +32,11 @@ namespace bootcamp
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddScoped<IConfiguration>(x => Configuration);
 
-            //var appSettings = Configuration.Get<AppSettings>("AppSettings");
-            //Location = appSettings.Location;
             services.AddMvc();
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(typeof(CustomExceptionFilterAttribute));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
