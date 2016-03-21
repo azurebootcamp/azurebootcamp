@@ -20,7 +20,7 @@
 
 body {
     font-family: 'Lato', Arial;
-    color: #666666;  
+    color: #666666;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -796,8 +796,6 @@ form textarea.form-control {
 }
 
 header {
-    
-    
     background: #37d0fb;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #37d0fb 0%, #3b4670 100%);
@@ -1088,8 +1086,7 @@ section#support .media:hover h3 {
 /* footer section */
 footer {
     background: #37d0fb;
-    
-        color: #ffffff;
+    color: #ffffff;
     /* Old browsers */
     background: -moz-linear-gradient(-45deg, #37d0fb 0%, #3b4670 100%);
     /* FF3.6+ */
@@ -1296,4 +1293,9 @@ form .form-control:focus {
 
 .pre-loader {
     background: #3b4670;
+}
+
+h1.sponsor {
+    color: cadetblue;
+    text-decoration: dotted;
 }
