@@ -1,4 +1,7 @@
 ﻿@model Prize[]
+@{
+    var splittedGroup = Extensions.Split<Prize>(Model, 3);
+}
 <section id="giveaways">
     <div class="container">
         <div class="section-heading scrollpoint sp-effect3">
@@ -7,15 +10,19 @@
         </div>
         <div class="row"> </div>
         <!-- row -->
-        <div class="row">
-            @foreach (var giveaway in Model)
-            {
-                <div class="col-lg-4 text-center">
-                    <a href="@giveaway.Link" target="_blank"><img src="@giveaway.ImageUrl" height="200px"></a> <br>
-                    <h2>@giveaway.Name</h2>
-                </div>
-            }
-        </div>
+        @foreach (var rowGroup in splittedGroup)
+        {
+            var bootstrapColumn = 12 / rowGroup.Count;
+            <div class="row">
+                @foreach (var giveaway in rowGroup)
+                {
+                    <div class="col-lg-@bootstrapColumn text-center">
+                        <a href="@giveaway.Link" target="_blank"><img src="@giveaway.ImageUrl" style="margin-top:30px;" height="80px"></a> <br>
+                        <h3>@giveaway.Name</h3>
+                    </div>
+                }
+            </div>
+        }
         <!-- row -->
     </div>
 </section>
