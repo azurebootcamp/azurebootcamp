@@ -8,6 +8,10 @@ namespace bootcamp
 {
     public static class Extensions
     {
+        public static List<List<T>> Split<T>(this IEnumerable<T> locations, int nSize = 30)
+        {
+            return locations.ToList().Split(nSize);
+        }
         public static List<List<T>> Split<T>(this List<T> locations, int nSize = 30)
         {
             var list = new List<List<T>>();
