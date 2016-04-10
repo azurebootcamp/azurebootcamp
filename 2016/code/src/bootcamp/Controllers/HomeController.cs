@@ -63,7 +63,7 @@ namespace bootcamp.Controllers
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
                 return RedirectToAction("Error");
             }
