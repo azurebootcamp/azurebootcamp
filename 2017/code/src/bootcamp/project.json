@@ -3,8 +3,8 @@
   "version": "1.0.0-*",
   "owners": [ "Punit Ganshani" ],
   "authors": [ "Punit Ganshani" ],
-  "description": "Global Azure Bootcamp 2016 template",
-  "title": "Global Azure Bootcamp 2016 template",
+  "description": "Global Azure Bootcamp 2017 template",
+  "title": "Global Azure Bootcamp 2017 template",
   "compilationOptions": {
     "emitEntryPoint": true
   },
