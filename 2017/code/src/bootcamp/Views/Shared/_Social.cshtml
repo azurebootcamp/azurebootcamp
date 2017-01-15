@@ -1,0 +1,34 @@
+﻿@model Social
+
+<ul class="list-inline banner-social-buttons">
+    @if (!String.IsNullOrEmpty(Model.Website))
+            {
+        <li>
+            <a href="@Model.Website" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-group fa-fw"></i> <span class="network-name">Web</span></a>
+        </li>
+    }
+    @if (!String.IsNullOrEmpty(Model.Meetup))
+            {
+        <li>
+            <a href="@Model.Meetup" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-group fa-fw"></i> <span class="network-name">Meetup</span></a>
+        </li>
+    }
+    @if (!String.IsNullOrEmpty(Model.Facebook))
+            {
+        <li>
+            <a href="@Model.Facebook" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+        </li>
+    }
+    @if (!String.IsNullOrEmpty(Model.Twitter))
+    { 
+        <li>
+            <a href="@Model.Twitter" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+        </li>
+    }
+    @if (!String.IsNullOrEmpty(Model.Google))
+            {
+        <li>
+            <a href="@Model.Google" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-google fa-fw"></i> <span class="network-name">Google</span></a>
+        </li>
+    }
+</ul> 

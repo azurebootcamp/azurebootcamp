@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_LayoutLocations";
+}
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <button class="btn-info" id="btnVerify">Verify JSON</button>
+        <br />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <span id="errors" class="ui-state-error-text">
+        </span>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+        <textarea id="jsonText" style="width:800px; height:300px"></textarea>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+
+        $(document).ready(function () {
+
+            $('#btnVerify').on('click', function () {
+                var jsonText = $('#jsonText').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/VerifyJSON/",
+                    contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+                    data: { 'value': jsonText },
+                    success: function (msg) {
+                        $('body').html(msg);
+                    },
+                    error: function (xhr) {
+                        try {
+                            var json = $.parseJSON(xhr.responseText);
+                            $('#errors').html("<br /><br /><b>Errors</b>:<br />" + json.ErrorMessage + "<br />");
+                        }
+                        catch (e) {
+                            alert('something bad happened');
+                        }
+                    }
+                });
+            });
+        });
+
+    </script>
+}
+

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Location - Global Azure Bootcamp 2016</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta property="og:title" content="@ViewBag.Location - Global Azure Bootcamp 2016">
+    <meta property="og:image" content="~/images/fb_img.png">
+    <environment names="Development,Staging,Production">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+
+        <link rel="stylesheet" href="~/css/animate.css">
+        <link rel="stylesheet" href="~/css/slick.css">
+        <link rel="stylesheet" href="~/js/rs-plugin/css/settings.css">
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/custom.css" />
+        <link rel="stylesheet" href="~/css/TimeCircles.css" />
+    </environment>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="fa fa-bars fa-lg"></span> </button>
+                    <a class="navbar-brand"> <img src="~/images/logo.png" alt="" class="logo"> </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#about">about</a>
+                        </li>
+                        @RenderSection("Menu", false)
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-->
+        </nav>
+        <div class="text-center intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="divTimer">
+                                <div id="CountDownTimer" data-bgcolor="#fff" data-date="2017-04-22 00:00:00" class="centered"
+                                     style="width: 100%; height:auto;" />
+                            </div>
+                            @RenderSection("Callout", false)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <section id="about">
+            <div class="container">
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>About Us</h1>
+                    <div class="divider"></div>
+                    <p>One day event where everyone, <b>globally</b>, talks about the expanding universe of Microsoft Azure!</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="about-item scrollpoint sp-effect2">
+                            <i class="fa fa-cloud fa-2x"></i>
+                            <h3>Deep Dive Sessions</h3>
+                            <p>
+                                One full day of <b>deep dive</b> sessions on Azure for Developers and IT Pro's delivered by the experts to get you started on complex topics like Media Streaming, Mobile
+                                Services, ALM, PowerShell and IoT
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="about-item scrollpoint sp-effect5">
+                            <i class="fa fa-usd fa-2x"></i>
+                            <h3>Free registration</h3>
+                            <p>
+                                Entry to this event is totally free! What more! There are
+                                <b>lot of SWAGs</b> from our sponsors!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-6">
+                        <div class="about-item scrollpoint sp-effect5">
+                            <i class="fa fa-users fa-2x"></i>
+                            <h3>Discuss with Experts</h3>
+                            <p> Have questions, need to discuss your technical issues, or looking for some advise, do attend to speak to the experts </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="large_white_light sft" data-x="center" data-y="250" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1400" data-easing="Power4.easeOut">
+            [ Designed by
+            <a href="//www.ganshani.com/?ref=azurebootcamp" target="_blank">Punit Ganshani</a> Hosted on
+            <a href="//azure.microsoft.com/en-us/" target="_blank">Microsoft Azure</a> Theme
+            <a href="//www.scoopthemes.com/templates/Oleose/Freeze/" target="_blank">Freeze</a> ]
+        </div>
+    </footer>
+
+   
+    <environment names="Development,Staging,Production">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/jquery-ui/jquery-ui.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <!-- Animation JS -->
+        <script src="~/js/slick.min.js" asp-append-version="true"></script>
+        <script src="~/js/placeholdem.min.js"></script>
+        <script src="~/js/rs-plugin/js/jquery.themepunch.plugins.min.js" asp-append-version="true"></script>
+        <script src="~/js/rs-plugin/js/jquery.themepunch.revolution.min.js" asp-append-version="true"></script>
+        <script src="~/js/waypoints.min.js" asp-append-version="true"></script>
+
+        <!--Custom JS-->
+
+        <script src="~/js/TimeCircles.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/custom.js" asp-append-version="true"></script>
+
+    </environment>
+    @RenderSection("scripts", required: false)
+    <script>
+        $(document).ready(function () {
+            appMaster.preLoader();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@model Session
+@{ 
+    bool hasSpeaker = false;
+    if (Model.Speaker != null)
+    {
+        hasSpeaker = true;
+        string speakerName = Model.Speaker.Name;
+        if (string.IsNullOrEmpty(speakerName)
+        || speakerName.Equals("TBD", StringComparison.InvariantCultureIgnoreCase)
+        || speakerName.Equals("TBC", StringComparison.InvariantCultureIgnoreCase))
+        {
+            speakerName = "TBD";
+            hasSpeaker = false;
+        }
+    }
+}
+<div class="agenda-event">
+    <b>@Model.Title</b><br>
+    @if (hasSpeaker)
+    {
+        @await Html.PartialAsync("_SessionSpeaker", Model.Speaker)
+    }
+</div>

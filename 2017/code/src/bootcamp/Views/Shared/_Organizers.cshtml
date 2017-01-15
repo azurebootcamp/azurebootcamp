@@ -1,0 +1,13 @@
+﻿@model Contact[]
+
+<ul class="dl-horizontal">
+    @foreach (var contact in Model)
+    {
+        if (contact.Social != null)
+        {
+            <li class='fa fa-envelope list-group-item'>
+                <a href="mailto:@contact.Social.Email" target="_blank">@contact.Name</a>
+            </li>
+        }
+    }
+</ul>

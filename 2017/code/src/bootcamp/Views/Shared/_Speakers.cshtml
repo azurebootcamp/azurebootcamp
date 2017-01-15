@@ -1,0 +1,107 @@
+﻿@model IEnumerable<Speaker>
+@{
+    var uniqueList = Model.DistinctBy(x => x.Name);
+
+    var speakerList = Extensions.Split<Speaker>(uniqueList.Where(x =>
+                x != null
+                && !string.IsNullOrEmpty(x.Name)
+                && !(x.Name.Equals("TBC", StringComparison.InvariantCultureIgnoreCase) || x.Name.Equals("TBD", StringComparison.InvariantCultureIgnoreCase))).ToList(), 2);
+}
+<section id="speakers" class="container content-section text-center">
+    <div class="container">
+        @if (speakerList.Count > 0)
+        {
+
+            <div class="section-heading scrollpoint sp-effect3">
+                <h1>Speakers</h1>
+                <div class="divider"></div>
+            </div>
+        }
+        @foreach (var row in speakerList)
+            {
+            <div class="row text-left">
+                @foreach (var speaker in row)
+                {
+                    string speakerName = speaker.Name;
+                    const int MaxDescLength = 200;
+                    var imageUrl = speaker.ImageUrl;
+                    var description = speaker.Description;
+                    bool trimmed = false;
+                    var bioID = "sbio-" + speaker.UniqueId();
+                    if (string.IsNullOrEmpty(imageUrl))
+                    {
+                        imageUrl = "~/images/gravatar.png";
+                    }
+                    if (description != null && description.Length > MaxDescLength)
+                    {
+                        description = description.Substring(0, MaxDescLength);
+                        trimmed = true;
+                    }
+                    <div class="col-lg-6">
+                        <h2 class="col-xs-12">@speakerName</h2>
+                        <div class="col-xs-4 hidden-xs"><img style="width:150px; height:auto;" src="@imageUrl"></div>
+                        <div class="col-xs-4 visible-xs-block"><img style="width:50px; height:auto;" src="@imageUrl"></div>
+                        <div class="col-xs-8">
+                            @description  @if (trimmed)
+                            {
+                                <a href="#" data-toggle="modal" data-target="#@bioID">.. more</a>
+                            }
+                            <br />
+                            @if (speaker.Social != null)
+                            {
+                                @if (!String.IsNullOrEmpty(speaker.Social.Website))
+                                {
+                                    <a href="@speaker.Social.Website" class="speakersocial"><i class="fa fa-group fa-fw"></i></a>
+                                }
+                                @if (!String.IsNullOrEmpty(speaker.Social.Meetup))
+                                {
+                                    <a href="@speaker.Social.Meetup" class="speakersocial"><i class="fa fa-group fa-fw"></i></a>
+                                }
+                                @if (!String.IsNullOrEmpty(speaker.Social.Facebook))
+                                {
+                                    <a href="@speaker.Social.Facebook" class="speakersocial"><i class="fa fa-facebook fa-fw"></i></a>
+                                }
+                                @if (!String.IsNullOrEmpty(speaker.Social.Twitter))
+                                {
+                                    <a href="@speaker.Social.Twitter" class="speakersocial"><i class="fa fa-twitter fa-fw"></i></a>
+                                }
+                                @if (!String.IsNullOrEmpty(speaker.Social.Google))
+                                {
+                                    <a href="@speaker.Social.Google" class="speakersocial"><i class="fa fa-google fa-fw"></i></a>
+                                }
+                            }
+                        </div>
+                    </div>
+                    @if (trimmed)
+                    {
+                        <div class="text-left modal fade @bioID" tabindex="-1" role="dialog"
+                             aria-labelledby="@bioID" aria-hidden="true" id="@bioID">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+                                        <h4 class="modal-title">@speaker.Name</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-4"><img src="@imageUrl" style="width:100%;" /></div>
+                                            <div class="col-md-8">@speaker.Description</div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                            <!-- /.modal-dialog -->
+                        </div>
+                    }
+                }
+            </div>
+            <div class="row">
+                <div class="col-xs-12" style="text-align:left;"><br /></div>
+            </div>
+        }
+    </div>
+</section>

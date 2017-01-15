@@ -1,0 +1,58 @@
+﻿@model Track[]
+@{
+    var tracks = Model.Select(x => x.Name).ToList();
+    var maxSessions = Model.Max(x => x.Sessions.Length) + 1;
+    var timeBasedRecords = LocationInfo.ToTimeWiseTracks(Model);
+}
+
+<!-- Contact Section -->
+<section id="agenda">
+    <div class="container">
+        <div class="section-heading scrollpoint sp-effect3">
+            <h1>Agenda</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="agenda">
+            <div class="table-responsive">
+                <table class="table table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th width="15%">Time</th>
+                            @foreach (var track in tracks)
+                            {
+                                <th width="@(85/(tracks.Count))%">@track</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        @foreach (var timeBased in timeBasedRecords)
+                        {
+                            var distinctTitles = timeBased.Value.Select(x => x.SessionId).Distinct().Count();
+                            if (distinctTitles == 1)
+                            {
+                                <tr>
+                                    <td class="agenda-time">@timeBased.Key</td>
+                                    <td class="agenda-events text-center" colspan="@tracks.Count">
+                                        @await Html.PartialAsync("_SessionDetails", timeBased.Value.First())
+                                    </td>
+                                </tr>
+                            }
+                            else {
+                                <tr>
+                                    <td class="agenda-time">@timeBased.Key</td>
+                                    @foreach (var session in timeBased.Value)
+                                    {
+                                        <td class="agenda-events">
+                                            @await Html.PartialAsync("_SessionDetails", session)
+                                        </td>
+                                    }
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

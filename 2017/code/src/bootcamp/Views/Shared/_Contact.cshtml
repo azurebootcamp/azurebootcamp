@@ -1,0 +1,25 @@
+﻿@model LocationInfo
+
+
+<section id="contact" class="container content-section text-center">
+    <div class="container">
+        <div class="section-heading scrollpoint sp-effect3">
+            <h1>Contact Us</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="row"> </div>
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Stay Connected on</h3>
+                @await Html.PartialAsync("_Social", Model.Social)
+            </div>
+            <div class="col-lg-6">
+                <h3>Write to us at</h3>
+                @await Html.PartialAsync("_Organizers", Model.Organizers)
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+   
+</section>

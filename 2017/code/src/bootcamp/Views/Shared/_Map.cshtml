@@ -1,0 +1,21 @@
+﻿@model Location
+
+<section id="locate">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="map" data-latitude='@Model.Latitude' data-longitude='@Model.Longitude'></div>
+            </div>
+        </div>
+    </div>
+    <!-- Map Section -->
+</section>
+
+
+@section scripts{
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO6AXw4-I0uuUxAKBKMtoB0eUmKfobjH0&sensor=false" type="text/javascript"></script>
+    <script src="~/js/google.js" asp-append-version="true"></script>
+
+}
