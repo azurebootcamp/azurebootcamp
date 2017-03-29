@@ -183,3 +183,4 @@ UpgradeLog*.htm
 FakesAssemblies/
 /2016/code/src/bootcamp/Properties/PublishProfiles
 /2017/code/src/bootcamp/Properties/PublishProfiles
+/2017/code/.vs/config/applicationhost.config

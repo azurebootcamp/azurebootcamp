@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace bootcamp.Models
 {
     public class LocationInfo
     {
+        public EventData Event { get; set; }
         public Location Location { get; set; }
         public Social Social { get; set; }
         public Callout Callout { get; set; }
@@ -35,7 +37,10 @@ namespace bootcamp.Models
             return output;
         }
     }
-
+    public class EventData
+    {
+        public string Date { get; set; }
+    }
     public class Location
     {
         public string Name { get; set; }
@@ -63,6 +68,8 @@ namespace bootcamp.Models
         public string Time { get; set; }
         public string Title { get; set; }
         public Speaker Speaker { get; set; }
+
+        public string Room { get; set; }
     }
 
     public class Speaker
@@ -71,6 +78,10 @@ namespace bootcamp.Models
         public string ImageUrl { get; set; }
         public string Description { get; set; }
         public Social Social { get; set; }
+
+        public string Organization { get; set; }
+
+        
 
         public string UniqueId()
         {

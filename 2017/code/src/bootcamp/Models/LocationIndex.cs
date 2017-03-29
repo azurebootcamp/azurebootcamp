@@ -7,7 +7,16 @@ namespace bootcamp.Models
 {
     public class LocationIndex
     {
-        public string[] Locations { get; set; }
+        public LocationIndexInfo[] Locations { get; set; }
     }
+
+    public class LocationIndexInfo
+    {
+        public string Name { get; set; }
+        public string Folder { get; set; }
+        public string WebsiteUrl { get; set; }
+        public bool Show { get; set; }
+    }
+
 
 }
